@@ -1,0 +1,60 @@
+@media(max-width:767px){
+  header {
+    text-align: center;
+    img {
+      margin:auto;
+    }  
+  }
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
+
+header {
+  // display:flex;
+  // flex-flow: row wrap;
+  background-color: indigo;
+  padding:10px;
+  h1 {
+    color:gold;
+  }
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: #777;
+}
+
+@import 'game1';
+@import 'game2';
+
+ body {
+  max-width: 600px;
+  margin: auto;
+ }
+
+.difficulty {
+  color: blue;
+  border: 1px solid black;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.challanges {
+  border: 1px solid black;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .chal {
+    border: 2px solid darkblue;
+    display: flex;
+    color: white;
+    background-color: blue;
+    height: 5em;
+    border-radius: 50%;
+    align-items: center;
+  }
+}

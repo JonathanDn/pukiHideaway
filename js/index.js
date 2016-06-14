@@ -1,28 +1,26 @@
 'use strict';
-var gGameState = {};
 var gChals = [{
 		href : 'game1.html',
 		name : 'The Garden',
 	}, {
-		href : 'game2',
+		href : 'game2.html',
 		name : 'The Forest',
 	}, {
-		href : 'game3',
-		name : 'The Beach',
+		href : 'game3.html',
+		name : 'The Beach or something else too long',
 	}
 ];
 
 $(document).ready(function () {
-
-	//Load gGameState
-	gGameState.currChal = loadCurrChal();
-	//	gGameState.difficulty = loadGameDifficulty();
-	changeDifficulty(loadGameDifficulty());
+	var currChal = loadCurrChal();
+	var difficulty = loadGameDifficulty()
+		changeDifficulty(difficulty);
+	renderChals(currChal);
 });
 
 function changeDifficulty(difficulty) {
 	saveGameDifficulty(difficulty);
-	
+
 	var $difficultyButtons = [];
 	$difficultyButtons[EASY] = $('#difficulty-easy');
 	$difficultyButtons[MEDIUM] = $('#difficulty-medium');
@@ -36,14 +34,41 @@ function changeDifficulty(difficulty) {
 			$button.addClass('btn-info');
 		}
 	});
-	/*	var $medium=$(#difficulty-medium);
-	var $hard=$(#difficulty-hard);
-	switch(difficulty){
-	case EASY:
-	$easy.addClass('btn-primary active');
-	$medium.removeClasss('btn-primary active');
-	$hard.removeClasss('btn-primary active');
-	break;
-	}
+}
+
+function renderChals(currChal) {
+	/*
+	<div class="chal">
+	Challange 1
+	</div>
+	<div class="chal">
+	Challange 2
+	</div>
+	<div class="chal">
+	Challange 3
+	</div>
 	 */
+	var $chalsDiv = $('.challanges');
+	var html = '';
+	gChals.forEach(function (chal, chalIndex) {
+
+		var currChalHtml = '<div class="chal';
+
+		if (chalIndex < currChal) {
+			//chal is already completed
+			currChalHtml += ' complete';
+		} else if (chalIndex > currChal) {
+			//chal still locked
+			currChalHtml += ' locked';
+		}
+		currChalHtml += '">' + chal.name + '</div>';
+
+		if (chalIndex <= currChal) {
+			currChalHtml = '<a href="' + chal.href + '">' + currChalHtml + '</a>';
+		}
+		html += currChalHtml
+
+	});
+	//console.log(html);
+	$chalsDiv.html(html);
 }

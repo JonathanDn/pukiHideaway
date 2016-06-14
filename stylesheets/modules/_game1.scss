@@ -45,6 +45,8 @@
 .game1Header {
     background-image: url('../img/game1Background.jpg');
     .headerText {
+        display: flex;
+        justify-content: center;
         color: white;
     }
 }

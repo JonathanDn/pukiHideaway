@@ -6264,6 +6264,8 @@ footer {
   background-image: url("../img/game1Background.jpg"); }
 
 .game1Header .headerText {
+  display: flex;
+  justify-content: center;
   color: white; }
 
 .nextChallangeContainer {

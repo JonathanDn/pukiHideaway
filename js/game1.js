@@ -145,6 +145,9 @@ function answerClicked(elAnswer) {
     if (elAnswer.innerText === rightFirstAnswer) {
         console.log('Right 1st Answer!');
         quests[0].isCorrect = true;
+        // update question number ++:
+        var elQuestionNum = document.querySelector('.questionNum');
+        elQuestionNum.innerText++;
         // now render again:
         renderQuestion();
         // console.log('quests[0].isCorrect: ', quests[0].isCorrect );
@@ -155,6 +158,9 @@ function answerClicked(elAnswer) {
     if (elAnswer.innerText === rightSecondAnswer) {
         console.log('Right 2nd Answer!');
         quests[1].isCorrect = true;
+        // update question number ++:
+        var elQuestionNum = document.querySelector('.questionNum');
+        elQuestionNum.innerText++;
         // now render questions to third questions.
         renderQuestion();
         return;
@@ -164,6 +170,9 @@ function answerClicked(elAnswer) {
     if (elAnswer.innerText === rightThirdAnswer) {
         console.log('Right 3rd Answer!');
         quests[2].isCorrect = true;
+        // update question number ++:
+        var elQuestionNum = document.querySelector('.questionNum');
+        elQuestionNum.innerText++;
         // now render questions to fourth questions.
         renderQuestion();
         return;
@@ -173,6 +182,9 @@ function answerClicked(elAnswer) {
     if (elAnswer.innerText === rightFourthAnswer) {
         console.log('Right 4th Answer!');
         quests[3].isCorrect = true;
+        // update question number ++:
+        var elQuestionNum = document.querySelector('.questionNum');
+        elQuestionNum.innerText++;
         // now render questions to fifth questions.
         renderQuestion();
         return;

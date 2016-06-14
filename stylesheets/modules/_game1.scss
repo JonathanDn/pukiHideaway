@@ -1,3 +1,68 @@
+
+// Parent container
 .game1 {
+    display: flex;
+    flex-direction: column;
+}
+// bear container within parent
+.bearContainer {
+    display:flex;
+    flex-direction: row;
+}
+
+// bear child1
+.teddyItem1 {
+    width: 50%;
+    height: 50%;
+}
+
+// bear child2
+.bearItem2 {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+// child3 CONTAINER of answeres
+.answerOptionsItem3 {
+    display:flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    margin: auto;
+    height: 100px;
+    .answerBar1 {
+        margin: 0.5em;
+    }
+    .answerBar2 {
+        margin: 0.5em;
+    }
+}
+
+
+// .game1Background {
+//   display: flex;
+//   margin: auto;
+//   width: 80%;
+//   height: 100%;
+//   justify-content: space-around;
+// }
+
+.game1Header {
+    background-image: url('../img/game1Background.jpg');
+    .headerText {
+        color: white;
+    }
+}
+
+
+.nextChallangeContainer {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
+
+// .nextChallange {
+
+// }

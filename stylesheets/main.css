@@ -6229,6 +6229,41 @@ footer {
   text-align: center;
   color: #777; }
 
+.game1 {
+  display: flex;
+  flex-direction: column; }
+
+.bearContainer {
+  display: flex;
+  flex-direction: row; }
+
+.teddyItem1 {
+  width: 50%;
+  height: 50%; }
+
+.bearItem2 {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%; }
+
+.answerOptionsItem3 {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100px; }
+
+.answerOptionsItem3 .answerBar1 {
+  margin: 0.5em; }
+
+.answerOptionsItem3 .answerBar2 {
+  margin: 0.5em; }
+
+.game1Header {
+  background-image: url("../img/game1Background.jpg"); }
+
+.game1Header .headerText {
+  color: white; }
+
 body {
   max-width: 600px;
   margin: auto; }
@@ -6254,3 +6289,7 @@ body {
   height: 5em;
   border-radius: 50%;
   align-items: center; }
+
+.game1Background {
+  width: 80%;
+  height: 100%; }

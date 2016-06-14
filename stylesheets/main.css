@@ -6278,6 +6278,50 @@ footer {
   width: 120px;
   margin: auto; }
 
+.game2 {
+  border: 1px solid black;
+  display: flex; }
+
+.boardContainer {
+  background: green;
+  border: 1px solid black;
+  display: flex; }
+
+.infoContainer {
+  background: blue;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; }
+
+.infoContainer .looseBlocks {
+  border: 1px solid black;
+  display: flex;
+  position: relative; }
+
+.leftBlock {
+  background: orange;
+  border: 1px solid black;
+  position: relative; }
+
+.leftBlockNum {
+  color: white;
+  position: absolute;
+  top: 38%;
+  left: 45%; }
+
+.rightBlock {
+  background: red;
+  border: 1px solid black;
+  position: relative; }
+
+.rightBlockNum {
+  color: white;
+  position: absolute;
+  top: 38%;
+  left: 45%; }
+
 body {
   max-width: 600px;
   margin: auto; }

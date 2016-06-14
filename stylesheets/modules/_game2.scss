@@ -1,3 +1,93 @@
 .game2 {
+    border: 1px solid black;
+    display:flex;
+    // justify-content: center;
+    // flex-direction: row;
+    // margin: auto;
+}
+
+.boardContainer {
+    background: green;
+    border: 1px solid black;
+    display: flex;
+
+}
+
+.infoContainer {
+    background: blue;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .currDifficulty {
+
+    }
+
+    .attemptsCount {
+
+    }
+    .looseBlocks {
+        border: 1px solid black;
+        display: flex;
+        position: relative;
+        
+    }
     
+}
+
+// LEFT BLOCK
+.leftBlock {
+    background: orange;
+    border: 1px solid black;
+    position: relative;
+    // height: 170px;
+    // width: 153px;
+}
+
+.leftBlockNum {
+    color: white;
+    position: absolute;
+    top: 38%;
+    left: 45%;
+    // center the text
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // position text on the image.
+    
+}
+
+.leftBlockImg {
+    // position:absolute;
+    // top: 0;
+    // left: 0;
+    // margin-top: 0;
+}
+
+// RIGHT BLOCK
+.rightBlock {
+    background: red;
+    border: 1px solid black;
+    position: relative;
+    // height: 170px;
+    // width: 153px;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.rightBlockNum {
+    color: white;
+    position: absolute;
+    top: 38%;
+    left: 45%;
+    // center the text
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // position text on the image.
+}
+
+.rightBlockImg {
+    // position: absolute;
 }

@@ -6280,12 +6280,13 @@ footer {
 
 .game2 {
   border: 1px solid black;
-  display: flex; }
+  display: flex;
+  height: 500px; }
 
 .boardContainer {
   background: green;
   border: 1px solid black;
-  display: flex; }
+  width: 100%; }
 
 .infoContainer {
   background: blue;
@@ -6293,34 +6294,57 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
 .infoContainer .looseBlocks {
   border: 1px solid black;
   display: flex;
-  position: relative; }
+  justify-content: space-around;
+  width: 80%; }
 
 .leftBlock {
-  background: orange;
-  border: 1px solid black;
-  position: relative; }
-
-.leftBlockNum {
   color: white;
+  background: black;
+  border: 1px solid white;
+  outline: 1px solid black;
+  position: relative;
+  height: 32px;
+  width: 36px;
+  text-align: center; }
+
+.leftBlock .leftBlockNum {
   position: absolute;
-  top: 38%;
-  left: 45%; }
+  top: 50%;
+  transform: translate(-50%, -50%); }
 
 .rightBlock {
-  background: red;
-  border: 1px solid black;
-  position: relative; }
-
-.rightBlockNum {
   color: white;
+  background: black;
+  border: 1px solid white;
+  outline: 1px solid black;
+  position: relative;
+  height: 32px;
+  width: 36px;
+  text-align: center; }
+
+.rightBlock .rightBlockNum {
   position: absolute;
-  top: 38%;
-  left: 45%; }
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.cell {
+  color: white;
+  background: black;
+  border: 1px solid white;
+  height: 32px;
+  width: 36px;
+  text-align: center; }
+
+.cell .rightBlockNum {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%); }
 
 body {
   max-width: 600px;

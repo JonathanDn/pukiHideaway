@@ -186,6 +186,10 @@ function answerClicked(elAnswer) {
         // change to happy bear
         var elTeddy = document.querySelector('.happyTeddy');
         elTeddy.src = 'img/happyteddy.png';
+        // display "next challange" button:
+        var elNextChal = document.querySelector('.nextChallangeContainer');
+        // console.log('elNextChal: ', elNextChal);
+        elNextChal.style.display = "block";
         renderQuestion();
         return;
     }

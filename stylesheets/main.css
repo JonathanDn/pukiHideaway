@@ -6235,7 +6235,9 @@ footer {
 
 .bearContainer {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5px; }
 
 .teddyItem1 {
   width: 50%;
@@ -6263,6 +6265,16 @@ footer {
 
 .game1Header .headerText {
   color: white; }
+
+.nextChallangeContainer {
+  display: none; }
+
+.nextChallangeContainer .nextChallange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  margin: auto; }
 
 body {
   max-width: 600px;

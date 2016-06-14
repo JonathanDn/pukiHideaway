@@ -6,8 +6,12 @@
 }
 // bear container within parent
 .bearContainer {
+    // border: 1px solid black;
     display:flex;
     flex-direction: row;
+    justify-content: space-around;
+    margin: 5px;
+
 }
 
 // bear child1
@@ -38,15 +42,6 @@
     }
 }
 
-
-// .game1Background {
-//   display: flex;
-//   margin: auto;
-//   width: 80%;
-//   height: 100%;
-//   justify-content: space-around;
-// }
-
 .game1Header {
     background-image: url('../img/game1Background.jpg');
     .headerText {
@@ -55,13 +50,20 @@
 }
 
 
+// next chal button container and button - currently hidden from display
 .nextChallangeContainer {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    display: none;
+    .nextChallange {
+        // border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        margin: auto;
+        
+    }
 }
+
 
 // .nextChallange {
 

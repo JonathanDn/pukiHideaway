@@ -148,6 +148,10 @@ function drop(ev) {
 
     // on the first drop ++ the count --> counts the draggables dropped succefully in curr row.
     gDroppedCounter++;
+
+
+    
+
     // if the count is 2(all hidden blocks are now placed with the dragged blocks)
     if (gDroppedCounter === NUMS.hiddenBlocks) {
 
@@ -158,11 +162,18 @@ function drop(ev) {
             alert('You win!!!!');
             return;
         }
-        // render the next row --> 0, 1, 2, 3...
-        renderBoard(gCurrRow);
+
+        // 1 SECOND DELAY before printing next row.
+        // you SOLVED this round.
+        setTimeout(function () {
+            // render the next row --> 0, 1, 2, 3...
+            renderBoard(gCurrRow);
+        }, 700);
+
         // Reset gDropped --> for the new row level.
         gDroppedCounter = 0;
     }
+    
 
     // notify the player that he is right.
     alert('right on!');

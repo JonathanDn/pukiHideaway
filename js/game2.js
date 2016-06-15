@@ -111,6 +111,12 @@ function drop(ev) {
         var draggedNum = ev.dataTransfer.getData("content");
         // if trying to put drag(1) on drop(2) || drag(2) on drop(1) return!
         if(draggedNum.substring(4, 5) !==  ev.target.id.substring(4, 5)) {
+            // up the total attempts counter
+            totalAttemptsCounter++;
+            // update the DOM total attempts counter:
+            var elAttemptsCounter = document.querySelector('.attempts');
+            elAttemptsCounter.innerHTML =  totalAttemptsCounter;
+            // notfy player he is wrong
             alert("Your'e wrong, try again!")
             return;
         };
@@ -121,15 +127,27 @@ function drop(ev) {
             // update the cell with the dragged item and color.
             ev.target.innerHTML = el2drag;
             ev.target.style.color = 'white';
+
+            // up the total attempts counter:
+            totalAttemptsCounter++;
+            // update the DOM total attempts counter:
+            var elAttemptsCounter = document.querySelector('.attempts');
+            elAttemptsCounter.innerHTML =  totalAttemptsCounter;
+            // notify the player that he is right.
             alert('right on!');
+            
     }
 }
+
 
 var nums = {rows: 3,
             cols: 7,
             initial: 1,
             arr: []
             };
+
+
+var totalAttemptsCounter = 0;
 
 
 

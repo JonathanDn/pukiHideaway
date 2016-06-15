@@ -1,0 +1,113 @@
+.game2 {
+    border: 1px solid black;
+    display:flex;
+    height: 500px;
+    // flex-direction: row;
+    // margin: auto;
+}
+
+.boardContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    background: green;
+    border: 1px solid black;
+    width: 100%
+}
+
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    background: blue;
+    border: 1px solid black;
+    position: relative;
+    width: 100%;
+    .currDifficulty {
+
+    }
+
+    .attemptsCount {
+        // currently to display loosblocks child centered in the colum
+        // untill I learn how to do it on % and not pixels
+        padding-bottom: 100px;
+    }
+    .looseBlocks {
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+    }
+    
+}
+
+// LEFT BLOCK
+.leftBlock {
+    color: white;
+    background: black;
+    border: 1px solid white;
+    outline: 1px solid black;
+    position: relative;
+    height: 32px;
+    width: 36px;
+    text-align: center;
+    .leftBlockNum {
+        // center on x / y axises --> anchor the text
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+// RIGHT BLOCK
+.rightBlock { 
+    color: white;
+    background: black;
+    border: 1px solid white;
+    outline: 1px solid black;
+    position: relative;
+    height: 32px;
+    width: 36px;
+    text-align: center;
+    .rightBlockNum {
+        // center on x / y axises --> anchor the text
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.cell {
+    color: white;
+    background: black;
+    border: 1px solid white;
+    height: 32px;
+    width: 36px;
+    text-align: center;
+    padding: 10px;
+
+    .rightBlockNum {
+        // center on x / y axises --> anchor the text
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+
+// next chal button container and button - currently hidden from display
+.nextChallangeContainer2 {
+    display: none;
+    padding-bottom: 10px;
+    .nextChallange2 {
+        // border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        margin: auto;
+        
+    }
+}

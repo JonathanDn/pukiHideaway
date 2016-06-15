@@ -6494,19 +6494,29 @@ footer {
   align-self: flex-start;
   background-image: url("../img/hippo.png");
   background-size: 100%;
-  margin-right: 30px; }
+  margin-right: 70px; }
 
 .animalWrap .animal3 {
+  width: 139px;
+  height: 129px;
   align-self: center;
-  background-color: purple; }
+  background-image: url("../img/hippo.png");
+  background-size: 100%; }
 
 .animalWrap .animal4 {
+  width: 139px;
+  height: 129px;
   align-self: baseline;
-  background-color: cyan; }
+  background-image: url("../img/hippo.png");
+  background-size: 100%;
+  margin-left: 30px; }
 
 .animalWrap .animal5 {
+  width: 139px;
+  height: 129px;
   align-self: flex-end;
-  background-color: blue; }
+  background-image: url("../img/hippo.png");
+  background-size: 100%; }
 
 body {
   max-width: 600px;

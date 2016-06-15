@@ -37,8 +37,8 @@ var quests = [{id: 1,
 // game init:
 function game1Init() {
     // before loading this game --> check if user is permitted to play.
-    // verifyChalAccess(0);
-    
+    verifyChalAccess(0);
+
     console.log('initing');
     // render questions from MODEL to DOM
     renderQuestion();
@@ -205,13 +205,19 @@ function answerClicked(elAnswer) {
         var elNextChal = document.querySelector('.nextChallangeContainer');
         // console.log('elNextChal: ', elNextChal);
         elNextChal.style.display = "block";
+        
+        // showing the next challange button
+        saveCurrChal(1);
+        
         renderQuestion();
+        
+        
         return;
     }
     
-
 }
 
-
-// Initialize game.
-game1Init();
+// init game 1
+$(document).ready(function () {
+    game1Init();
+});

@@ -71,12 +71,12 @@ footer {
   }
   .complete:before{
     @extend .glyphicon-ok:before, .my-glyphicon;
-	color:greenyellow;
+	  color:greenyellow;
   }
   .locked:before{
   @extend .glyphicon-lock:before, .my-glyphicon;
-  font-size:1.5em;
-  color:black;
+    font-size: 1.5em;
+    color: black;
   }
-
+ 
 }

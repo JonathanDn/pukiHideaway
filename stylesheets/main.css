@@ -6392,15 +6392,9 @@ body {
   border-radius: 50%;
   align-items: center; }
 
-<<<<<<< HEAD
-.game1Background {
-  width: 80%;
-  height: 100%; }
-=======
 .challanges .complete:before {
   color: greenyellow; }
 
 .challanges .locked:before {
   font-size: 1.5em;
   color: black; }
->>>>>>> ef07671ae5eab1da4772633c0794dd77f95cdbed

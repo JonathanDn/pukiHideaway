@@ -139,6 +139,7 @@ function drop(ev) {
 
             // notify the player that he is right.
             alert('right on!');
+            
        
 }
 
@@ -153,10 +154,11 @@ var nums = {rows: 3,
 var totalAttemptsCounter = 0;
 
 
-
-
-createBoard();
-
-renderBoard();
+// init game 1
+$(document).ready(function () {
+    verifyChalAccess(1);
+    createBoard();
+    renderBoard();
+});
 
 

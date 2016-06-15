@@ -126,7 +126,7 @@ function drop(ev) {
         var elAttemptsCounter = document.querySelector('.attempts');
         elAttemptsCounter.innerHTML = gTotalAttemptsCounter;
         // notfy player he is wrong
-        alert("Your'e wrong, try again!")
+        // alert("Your'e wrong, try again!")
         return;
     };
 
@@ -176,7 +176,7 @@ function drop(ev) {
     
 
     // notify the player that he is right.
-    alert('right on!');
+    // alert('right on!');
 
 
 }

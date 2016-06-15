@@ -307,7 +307,7 @@ th {
 .glyphicon-th-list:before {
   content: "\e012"; }
 
-.glyphicon-ok:before {
+.glyphicon-ok:before, .challanges .complete:before {
   content: "\e013"; }
 
 .glyphicon-remove:before {
@@ -367,7 +367,7 @@ th {
 .glyphicon-list-alt:before {
   content: "\e032"; }
 
-.glyphicon-lock:before {
+.glyphicon-lock:before, .challanges .locked:before {
   content: "\e033"; }
 
 .glyphicon-flag:before {
@@ -6365,6 +6365,18 @@ body {
   flex-direction: row;
   justify-content: space-around; }
 
+.my-glyphicon, .challanges .complete:before, .challanges .locked:before {
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  z-index: 1;
+  color: blue; }
+
 .challanges {
   border: 1px solid black;
   display: flex;
@@ -6380,6 +6392,15 @@ body {
   border-radius: 50%;
   align-items: center; }
 
+<<<<<<< HEAD
 .game1Background {
   width: 80%;
   height: 100%; }
+=======
+.challanges .complete:before {
+  color: greenyellow; }
+
+.challanges .locked:before {
+  font-size: 1.5em;
+  color: black; }
+>>>>>>> ef07671ae5eab1da4772633c0794dd77f95cdbed

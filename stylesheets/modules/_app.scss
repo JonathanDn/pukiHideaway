@@ -42,7 +42,19 @@ footer {
   flex-direction: row;
   justify-content: space-around;
 }
-
+.my-glyphicon{
+	  //top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+	position:absolute;
+	z-index:1;
+	color:blue;
+}
 .challanges {
   border: 1px solid black;
   display:flex;
@@ -57,9 +69,14 @@ footer {
     border-radius: 50%;
     align-items: center;
   }
-}
+  .complete:before{
+    @extend .glyphicon-ok:before, .my-glyphicon;
+	color:greenyellow;
+  }
+  .locked:before{
+  @extend .glyphicon-lock:before, .my-glyphicon;
+  font-size:1.5em;
+  color:black;
+  }
 
-.game1Background {
-  width: 80%;
-  height: 100%;
 }

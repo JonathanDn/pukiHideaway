@@ -6354,6 +6354,17 @@ footer {
   top: 50%;
   transform: translate(-50%, -50%); }
 
+.nextChallangeContainer2 {
+  display: none;
+  padding-bottom: 10px; }
+
+.nextChallangeContainer2 .nextChallange2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  margin: auto; }
+
 body {
   max-width: 600px;
   margin: auto; }

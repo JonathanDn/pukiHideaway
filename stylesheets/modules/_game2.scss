@@ -95,3 +95,19 @@
         transform: translate(-50%,-50%);
     }
 }
+
+
+// next chal button container and button - currently hidden from display
+.nextChallangeContainer2 {
+    display: none;
+    padding-bottom: 10px;
+    .nextChallange2 {
+        // border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        margin: auto;
+        
+    }
+}

@@ -1,6 +1,6 @@
 'use strict'
 
-var NUMS = {rows: 10,
+var NUMS = {rows: 3,
             cols: 7,
             hiddenBlocks: 3
             };
@@ -160,6 +160,19 @@ function drop(ev) {
         // when row number is 10 and you finish you win.
         if (gCurrRow === NUMS.rows) {
             alert('You win!!!!');
+
+            // display "next challange" button:
+            var elNextChal = document.querySelector('.nextChallangeContainer2');
+            // console.log('elNextChal: ', elNextChal);
+            elNextChal.style.display = "block";
+            // save curr chal progress.
+            // console.log('before saving ls');
+            
+            // save progress to local storage.
+            saveCurrChal(2);
+            // console.log('after saving ls');
+            
+
             return;
         }
 

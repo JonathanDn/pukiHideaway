@@ -49,8 +49,21 @@ function renderBoard(row) {
     var randNums = [];
     var elCells2Hide = [];
     for (var i = 0; i < NUMS.hiddenBlocks; i++) {
-        // create a dynamic rand Nums array.
-        randNums.push(parseInt(Math.random() * NUMS.cols));
+
+        // create a DYNAMIC RAND NUMS ARRAY.
+        // define randNum this round.
+        var randNum = parseInt(Math.random() * NUMS.cols);
+        // check if this randNum exists in the array before.
+
+        // make sure ALL RANDOM NUMS are UNIQUE.
+        while (randNums.includes(randNum)) {
+            // if this randNum exists -->  replace the new randNum.
+            randNum = parseInt(Math.random() * NUMS.cols);
+        }
+        // if randNum not included in array PUSH it!
+        randNums.push(randNum);
+
+        // if not existing --> push it.
         // create a dynamic amount of cells 2 hide( and drag)
         elCells2Hide.push(document.getElementById(row +'-' + randNums[i]));
     }

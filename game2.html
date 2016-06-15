@@ -12,7 +12,11 @@
     <!--left part of screen-->
       <div class="boardContainer">
         <!--the div to drop at-->
-          <div class="gameContainer">
+          <div >
+            <table align="center">
+              <tbody class="gameContainer">
+              </tbody>
+            </table>
             <!--11111111111111111111111111111111111111111-->
           </div>
       </div>
@@ -28,17 +32,7 @@
         <!--present blocks to pick up-->
         <div class="looseBlocks">
           <!--the div to drag from-->
-          <div ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div class="leftBlock" draggable="true" ondragstart="drag(event)"  id="drag1">
-              <span class="leftBlockNum" >18</span>
-            </div>
-          </div>
-
-          <div ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div class="rightBlock" draggable="true" ondragstart="drag(event)"  id="drag2">
-              <span class="rightBlockNum">19</span>
-            </div>
-          </div>
+          
 
         </div>
       </div>

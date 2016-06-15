@@ -18,30 +18,51 @@ function createBoard() {
     // console.log('nums.arr: ', nums.arr);
 }
 
-function renderBoard() {
-    var counter = 1;
+function renderBoard(row) {
     var elGameContainer = document.querySelector('.gameContainer');
     // console.log('elGameContainer: ', elGameContainer);
     
-    var strHTML = '<table align="center"><tbody>';
-    for (var i = 0; i < nums.rows; i++) {
-        strHTML += '<tr>';  
-        for (var j = 0; j < nums.cols; j++) {
-            // console.log('nums.arr[i][j]: ', nums.arr[i][j]);
-            // added id for each cell.
-            strHTML += '<td id="' + i + '-' + j + '" class="cell">' + counter + '</td>';
-            counter++;
-        }
-        strHTML += '</tr>';
-
+    var strHTML = '';
+    var i = row;
+    strHTML += '<tr>';  
+    for (var j = 0; j < nums.cols; j++) {
+        // var counter = i * j + 1;
+        // console.log('nums.arr[i][j]: ', nums.arr[i][j]);
+        // added id for each cell.
+        strHTML += '<td id="' + i + '-' + j + '" class="cell">' + ((j+row*nums.cols) + 1 )+ '</td>';
+        // counter++;
     }
-    strHTML += '</tbody></table>';
-
-    elGameContainer.innerHTML = strHTML;
+    strHTML += '</tr>';
+    // console.log('strHTML: ', strHTML);
+    
+    elGameContainer.innerHTML += strHTML;
     // console.log('elGameContainer: ', elGameContainer);
     // hide 2 cells:(get them and hide them.)
-    var elCell2Hide1 = document.getElementById('2-3');
-    var elCell2Hide2 = document.getElementById('2-4');
+
+    // take 2 random nums
+    var randNum1 = parseInt(Math.random() * nums.cols);
+    var randNum2 = parseInt(Math.random() * nums.cols);
+    // console.log('randNum1: ', randNum1);
+    
+    // show 2 different empty blocks
+    var elCell2Hide1 = document.getElementById(row +'-' + randNum1 );
+    var elCell2Hide2 = document.getElementById(row +'-'+ randNum2 );
+
+    // create the left blocks
+    var elLooseBlocks = document.querySelector('.looseBlocks');
+    elLooseBlocks.innerHTML = 
+        '<div ondrop="drop(event)" ondragover="allowDrop(event)">'
+            + ' <div class="leftBlock" draggable="true" ondragstart="drag(event)"  id="drag1">'
+                + '<span class="leftBlockNum" >' + elCell2Hide1.innerText  + '</span>'
+            + '</div>'
+        + '</div>'
+
+        + '<div ondrop="drop(event)" ondragover="allowDrop(event)">'
+            + '<div class="rightBlock" draggable="true" ondragstart="drag(event)"  id="drag2">'
+                +  '<span class="rightBlockNum">' + elCell2Hide2.innerText + '</span>'
+            + '</div>'
+        + '</div>'
+
     // console.log('elCell2Hide1: ', elCell2Hide1);
     // console.log('elCell2Hide2: ', elCell2Hide2);
     // hidden them succefully.
@@ -144,7 +165,7 @@ function drop(ev) {
 }
 
 
-var nums = {rows: 3,
+var nums = {rows: 10,
             cols: 7,
             initial: 1,
             arr: []
@@ -158,7 +179,9 @@ var totalAttemptsCounter = 0;
 $(document).ready(function () {
     verifyChalAccess(1);
     createBoard();
-    renderBoard();
+    renderBoard(0);
+    // renderBoard(1);
+    // renderBoard(2);
 });
 
 

@@ -6365,6 +6365,149 @@ footer {
   width: 120px;
   margin: auto; }
 
+.game2 {
+  border: 1px solid black;
+  display: flex;
+  height: 500px; }
+
+.boardContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  background: green;
+  border: 1px solid black;
+  width: 100%; }
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  background: blue;
+  border: 1px solid black;
+  position: relative;
+  width: 100%; }
+
+.infoContainer .attemptsCount {
+  padding-bottom: 100px; }
+
+.infoContainer .looseBlocks {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  width: 80%; }
+
+.leftBlock {
+  color: white;
+  background: black;
+  border: 1px solid white;
+  outline: 1px solid black;
+  position: relative;
+  height: 32px;
+  width: 36px;
+  text-align: center; }
+
+.leftBlock .leftBlockNum {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.rightBlock {
+  color: white;
+  background: black;
+  border: 1px solid white;
+  outline: 1px solid black;
+  position: relative;
+  height: 32px;
+  width: 36px;
+  text-align: center; }
+
+.rightBlock .rightBlockNum {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.cell {
+  color: white;
+  background: black;
+  border: 1px solid white;
+  height: 32px;
+  width: 36px;
+  text-align: center;
+  padding: 10px; }
+
+.cell .rightBlockNum {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.nextChallangeContainer2 {
+  display: none;
+  padding-bottom: 10px; }
+
+.nextChallangeContainer2 .nextChallange2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  margin: auto; }
+
+.game4Header {
+  background-image: url("../img/game4background.jpg");
+  height: 650px;
+  max-width: 700px; }
+
+.question1 {
+  color: black;
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+  width: 9em;
+  text-align: center;
+  padding: 0.5em;
+  margin: 1em; }
+
+.animalWrap {
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 450px;
+  width: 90%;
+  margin: auto; }
+
+.animalWrap .animal {
+  border: 1px solid black; }
+
+.animalWrap .animal1 {
+  width: 139px;
+  height: 129px;
+  align-self: flex-end;
+  background-image: url("../img/hippo.png");
+  background-size: 100%;
+  margin-bottom: 50px;
+  margin-left: 20px; }
+
+.animalWrap .animal2 {
+  width: 139px;
+  height: 129px;
+  align-self: flex-start;
+  background-image: url("../img/hippo.png");
+  background-size: 100%;
+  margin-right: 30px; }
+
+.animalWrap .animal3 {
+  align-self: center;
+  background-color: purple; }
+
+.animalWrap .animal4 {
+  align-self: baseline;
+  background-color: cyan; }
+
+.animalWrap .animal5 {
+  align-self: flex-end;
+  background-color: blue; }
+
 body {
   max-width: 600px;
   margin: auto; }

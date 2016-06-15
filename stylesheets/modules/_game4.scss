@@ -1,0 +1,65 @@
+
+.game4Header {
+    background-image: url("../img/game4background.jpg");
+    height: 650px;
+    max-width: 700px;
+    // background-color: green;
+} 
+
+.question1 {
+    color: black;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    width: 9em;
+    text-align: center;
+    padding: 0.5em;
+    margin: 1em;
+    
+}
+
+
+.animalWrap {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 450px;
+    width: 90%;
+    margin: auto;
+    .animal {
+        border: 1px solid black;
+        
+    }
+    .animal1 {
+        width: 139px;
+        height: 129px;
+        align-self: flex-end;
+        // background-color: red;
+        background-image: url("../img/hippo.png");
+        background-size: 100%;
+        margin-bottom: 50px;
+        margin-left: 20px;
+    }
+    .animal2 {
+        width: 139px;
+        height: 129px;
+        align-self: flex-start;
+        // background-color: green;
+         background-image: url("../img/hippo.png");
+        background-size: 100%;
+        margin-right: 30px;
+    }
+    .animal3 {
+        align-self: center;
+        background-color: purple;
+    }
+    .animal4 {
+        align-self: baseline;
+        background-color: cyan;
+    }
+    .animal5 {
+        align-self: flex-end;
+        background-color: blue;
+    }
+}

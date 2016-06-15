@@ -7,6 +7,9 @@
 }
 
 .boardContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
     background: green;
     border: 1px solid black;
     width: 100%
@@ -14,11 +17,12 @@
 
 
 .infoContainer {
-    background: blue;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 30px;
+    background: blue;
+    border: 1px solid black;
     position: relative;
     width: 100%;
     .currDifficulty {
@@ -26,7 +30,9 @@
     }
 
     .attemptsCount {
-
+        // currently to display loosblocks child centered in the colum
+        // untill I learn how to do it on % and not pixels
+        padding-bottom: 100px;
     }
     .looseBlocks {
         border: 1px solid black;
@@ -80,7 +86,8 @@
     height: 32px;
     width: 36px;
     text-align: center;
-    
+    padding: 10px;
+
     .rightBlockNum {
         // center on x / y axises --> anchor the text
         position: absolute;

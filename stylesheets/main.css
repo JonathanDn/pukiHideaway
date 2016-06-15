@@ -6284,18 +6284,25 @@ footer {
   height: 500px; }
 
 .boardContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
   background: green;
   border: 1px solid black;
   width: 100%; }
 
 .infoContainer {
-  background: blue;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 30px;
+  background: blue;
+  border: 1px solid black;
   position: relative;
   width: 100%; }
+
+.infoContainer .attemptsCount {
+  padding-bottom: 100px; }
 
 .infoContainer .looseBlocks {
   border: 1px solid black;
@@ -6339,7 +6346,8 @@ footer {
   border: 1px solid white;
   height: 32px;
   width: 36px;
-  text-align: center; }
+  text-align: center;
+  padding: 10px; }
 
 .cell .rightBlockNum {
   position: absolute;

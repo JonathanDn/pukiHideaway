@@ -28,6 +28,7 @@ function saveGameDifficulty(difficulty) {
 
 //updates current unlocked chal (to be used when the user finishes a chal)
 function saveCurrChal(currChal) {
+	// curr chal in local storage < then curr chal.
 	if (loadCurrChal() < currChal) {
 		localStorage.pukisHideawayByRobertAndJonnyCurrChal = currChal;
 	}

@@ -167,7 +167,7 @@ function drop(ev) {
             elNextChal.style.display = "block";
             // save curr chal progress.
             // console.log('before saving ls');
-            
+
             // save progress to local storage.
             saveCurrChal(2);
             // console.log('after saving ls');

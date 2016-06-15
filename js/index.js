@@ -1,13 +1,17 @@
 'use strict';
 var gChals = [{
 		href : 'game1.html',
-		name : 'The Garden',
+		name : 'Match picture and text',
 	}, {
 		href : 'game2.html',
-		name : 'The Forest',
+		name : 'Complete numbers table',
 	}, {
 		href : 'game3.html',
-		name : 'The Beach or something else too long',
+		name : 'Calculations',
+	},
+	{
+		href : 'game4.html',
+		name : 'Counting Stuff',
 	}
 ];
 

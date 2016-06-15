@@ -45,6 +45,8 @@ function renderBoard() {
     // console.log('elCell2Hide1: ', elCell2Hide1);
     // console.log('elCell2Hide2: ', elCell2Hide2);
     // hidden them succefully.
+    elCell2Hide1.innerText = ' ';
+    elCell2Hide2.innerText = ' ';
     elCell2Hide1.style.color = 'black';
     elCell2Hide2.style.color = 'black';
     // add drop attributes:
@@ -69,8 +71,6 @@ function renderBoard() {
 function allowDrop(ev) {
     // cancel event ondragover
     ev.preventDefault();
-    
-    
 }
 function drag(ev) {
     
@@ -81,13 +81,13 @@ function drag(ev) {
     
 }
 function drop(ev) {
-    var el2drag = ev.target.innerHTML;
     // cancel event ondragover
     console.log('ev: ', ev);
     
     ev.preventDefault();
     // identify our content dragged:
     var draggedNum = ev.dataTransfer.getData("content");
+    var innerHTMLEl2drag = ev.srcElement.innerHTML;
     // the dragged element
     // console.log('draggedNum: ', draggedNum);
 
@@ -101,12 +101,11 @@ function drop(ev) {
 
     // append the dragged item --> to the drop target.
 
-    if(el2drag === ev.target.innerHTML) {
         //  console.log('el2drag: ', el2drag);
         //  console.log('ev.target.id: ', ev.target.id);
         //  console.log('draggedNum substring: ', draggedNum.substring(4, 5));
         //  console.log('ev.target.id substring: ', ev.target.id.substring(4, 5));
-
+        
         // APPEND only if the DRAGGED item id === DROP TARGET item id.
         var draggedNum = ev.dataTransfer.getData("content");
         // if trying to put drag(1) on drop(2) || drag(2) on drop(1) return!
@@ -124,8 +123,11 @@ function drop(ev) {
             // console.log('ev.target: ', ev.target);
             ev.target.appendChild(document.getElementById(draggedNum));
 
+            // add back the content:
+            // console.log('innerHTMLEl2drag: ', innerHTMLEl2drag);
+            ev.target.innerHTML = ev.srcElement.innerText;
+
             // update the cell with the dragged item and color.
-            ev.target.innerHTML = el2drag;
             ev.target.style.color = 'white';
 
             // up the total attempts counter:
@@ -133,10 +135,11 @@ function drop(ev) {
             // update the DOM total attempts counter:
             var elAttemptsCounter = document.querySelector('.attempts');
             elAttemptsCounter.innerHTML =  totalAttemptsCounter;
+
+
             // notify the player that he is right.
             alert('right on!');
-            
-    }
+       
 }
 
 

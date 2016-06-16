@@ -1,58 +1,106 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Challange 1</title>
-  <link rel="stylesheet" href="stylesheets/main.css"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Challange 1</title>
+	<link rel="stylesheet" href="stylesheets/main.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-  
-  <div class="game1Header">
-    <h1 class="headerText">Question&nbsp<span class="questionNum">1</span>&nbspout of 5</h1>
+	<!--praent container    -->
+	<div class="game3">
+		<!--left part of screen-->
+		<div class="boardContainer">
+			<!--the div to drop at-->
+			<div>
+				<!--next chal button HIDDEN-->
+				<div class="nextChallangeContainer2">
+					<a class="nextChallange2" href="index.html">
+						<div class="btn btn-success">Continue Questing
+						</div>
+					</a>
+				</div>
+				<div class="gameBoard">
+				</div>
+<!--				<table align="center">
+					<tbody class="gameContainer">
+						<tr>
+							<td id="drop2" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)" >for 1
+							</td>
+							<td id="0-1" class="cell">2</td>
+							<td id="drop1" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)" >for 3
+							</td>
+							<td id="drop3" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)" >for anything
+							</td>
+							<td id="0-4" class="cell">5</td>
+							<td id="0-5" class="cell">6</td>
+							<td id="0-6" class="cell">7</td>
+						</tr>
+						<tr>
+							<td id="adrop2" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)" style="color: black;">
+							</td>
+							<td id="a0-1" class="cell">2</td>
+							<td id="adrop1" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)" style="color: black;">
+							</td>
+							<td id="adrop3" class="cell" ondrop="drop(event)" ondragover="allowDrop(event)" style="color: black;">
+							</td>
+							<td id="a0-4" class="cell">5</td>
+						</tr>
+					</tbody>
+				</table>
+-->
+				<!--11111111111111111111111111111111111111111-->
+			</div>
+		</div>
 
-      <!--next chal button-->
-      <div class="nextChallangeContainer">
-        <a class="nextChallange" href="index.html">
-          <div class="btn btn-success">Continue Questing
-          </div>
-        </a>
-      </div>
+		<!--right part of screen-->
+		<div class="infoContainer">
+			<div class="currDifficulty">
+				Beginner
+			</div>
+			<div class="attemptsCount">
+				Total Attempts: <span class="attempts">0</span>
+			</div>
+			<!--present blocks to pick up-->
+			<div class="sumBlocks"></div>
+<!--			
+			<div class="looseBlocks">
+				< !--the div to drag from-- >
 
-      <div class="game1">
-          <!--the bears row-->
-        <div class= "bearContainer">
-          <img class="happyTeddy teddyItem1" src="img/Teddy-Bear-Logo.png" alt="teddyBear">
-          <img class="changingImg bearItem2 fixedImgFrame" src="img/polarBear.jpg" alt="">
-        </div>
-        <!--the answer container-->
-        <!--the amount of answers + answers content will be created in JS-->
-        <div class="answerOptionsItem3">
-          <div class="answerBar1 btn btn-info" onclick="answerClicked(this)">bla bla bla bla bla bla bla bla bla</div>
-          <div class="answerBar2 btn btn-info" onclick="answerClicked(this)">bla bla bla bla bla bla bla bla bla</div>
-          <!--<div class="answerBar1 btn btn-info">answer3</div>
-          <div class="answerBar1 btn btn-info">answer4</div>-->
-        </div>
-        
-      </div>
-    
-  </div>
-  
-<div class="body">
-    <main class="content">
-    </main>
-</div>
-<footer>
-  cofferights &copy; 2016  
-</footer>
+				<div >
+					<div class="leftBlock" id="drag1">
+						<span class="leftBlockNum">3</span>
+					</div>
+				</div>
+				<div >
+					<div class="leftBlock" id="drag2">
+						<span class="leftBlockNum">1</span>
+					</div>
+				</div>
+				<div ondrop="drop(event)" ondragover="allowDrop(event)">
+					<div class="leftBlock" draggable="true" ondragstart="drag(event)" id="drag3">
+						<span class="leftBlockNum">4</span>
+					</div>
+				</div>
+			</div>
+-->
+		</div>
 
-  <script src="lib/jquery/jquery.js"></script>
-  <script src="lib/jquery/jquery-ui.js"></script>
-  <script src="lib/jquery/jquery.ui.touch-punch.min.js"></script>
-  
-  <script src="js/app.js"></script>
-  <script src="js/localStorage.js"></script>
-  <script src="js/game3.js"></script>
- 
+	</div>
+
+	<footer>
+		cofferights &copy; 2016
+	</footer>
+
+	<script src="lib/jquery/jquery.js"></script>
+	<script src="lib/jquery/jquery-ui.js"></script>
+	<script src="lib/jquery/jquery.ui.touch-punch.min.js"></script>
+
+	<script src="js/localStorage.js"></script>
+	<script src="js/game3.js"></script>
+
 </body>
+
 </html>

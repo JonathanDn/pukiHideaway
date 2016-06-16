@@ -29,6 +29,12 @@ var animals = [{id: 1,
                answers: [1, 2, 3, 4, 5],
                correctOptIndex: 1,
                isCorrect: false
+               },
+               {id: 6,
+               image: 'img/dolphin.png',
+               answers: [1, 2, 3, 4, 5],
+               correctOptIndex: 1,
+               isCorrect: false
                }];
 
 
@@ -38,46 +44,66 @@ function getAnimalsLocation() {
     return elLocation;
 };
 
-// getAnimalsLocation();
+function getRandomAnimalImage() {
+    var randAnimal = animals[parseInt(Math.random() * animals.length)].image
+    console.log('randAnimal: ', randAnimal); 
+    return randAnimal;
+}
 
-function createAnimals() {
-    var animalsLocations = getAnimalsLocation();
-    // console.log('animalsLocations: ', animalsLocations);
-    // console.log('animalsLocations[0]: ', animalsLocations[0]);
-    // console.log('animalsLocations[0].children: ', animalsLocations[0].children);
-    
+function getRandomAmountOfAnimalsToPlace(animalsLocations) {
+    var randAmountOfAnimalsToPlace = parseInt(Math.random() * animalsLocations.length) + 1;
+    return randAmountOfAnimalsToPlace;
+}
 
+function getRandomLocationToPlaceAnimal(animalsLocations) {
+    var randLocation = parseInt(Math.random() * animalsLocations.length);
+    return randLocation;
+}
+
+function getRandomAnimal() {
     // randomly pick an animal i make a loop and put this string inside it.
     var animalImageHTML = '';
-    animalImageHTML += '<img src="' + animals[1].image + '" alt="">';
-    // console.log('animalImageHTML: ', animalImageHTML);
-    
-    // 1. if there is no animal in the div put an animal inside
-    // 2. next stage to change the for loop to put an image randomly not in every spot.
+    animalImageHTML += '<img src="' + getRandomAnimalImage() + '" alt="">';
+    return animalImageHTML;
+}
 
-    // rand amount of animals to present
-    var randAmountOfAnimalsToPlace = parseInt(Math.random() * animals.length) + 1;
+
+function createAnimals() {
+    // grab the all possible animal locations:
+    var animalsLocations = getAnimalsLocation();
+    
+    // grab random animal species:
+    var randAnimalHTML = getRandomAnimal();
+
+    // grab X amount of animals to place:
+    var animalsAmount = getRandomAmountOfAnimalsToPlace(animalsLocations);
     // console.log('randAmountOfAnimalsToPlace: ', randAmountOfAnimalsToPlace);
     
     // for the given amount of animals to place this round start placing:
-    while (randAmountOfAnimalsToPlace > 0) {
+    while (animalsAmount > 0) {
         
         // create rand location for animal:
-        var randLocation = parseInt(Math.random() * animalsLocations.length);
-        // put animal in random location
-        // console.log('animalsLocations[randLocation]: ', animalsLocations[randLocation]);
+        var randLoc = getRandomLocationToPlaceAnimal(animalsLocations);
         
         // if there is no anima; in this location:
-        if (animalsLocations[randLocation].children.length === 0) {
+        if (animalsLocations[randLoc].children.length === 0) {
             // console.log('here 2');
 
             // place it:
-            animalsLocations[randLocation].innerHTML = animalImageHTML;
+            animalsLocations[randLoc].innerHTML = randAnimalHTML;
             // - the given amount of animals to place until you reach 0 and exit while
-            randAmountOfAnimalsToPlace--;
+            animalsAmount--;
         }
     }
 }
 
-createAnimals();
+function gameInit(){
+    createAnimals();
+}
 
+
+// init game 4
+$(document).ready(function () {
+	// verifyChalAccess(3);
+	gameInit();
+});

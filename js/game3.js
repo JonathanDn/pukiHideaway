@@ -1,26 +1,11 @@
 'use strict';
 var AMOUNT=10;
+
 $(document).ready(function () {
 	//    verifyChalAccess(2);
-	//    renderBoard(0);
-	testing();
 	renderBoard();
 	initDragAndDrop();
-	console.log(Date.now());
 });
-
-function testing() {
-	$("#drag1").draggable();
-	$("#drag2").draggable();
-
-	$('#drop1').droppable({
-		accept : '#drag1'
-	});
-	$('#drop2').droppable({
-		accept : '#drag2'
-	});
-	$('#drop3').droppable();
-}
 
 function renderBoard() {
 	var $board = $('.gameBoard');
@@ -32,7 +17,7 @@ function renderBoard() {
 		if (randomNumber === 0) {
 			randomNumber = parseInt(Math.random() * i);
 		}
-
+		//put each question (excersise) in random order
 		boardItems.splice(parseInt(Math.random() * i), 0,
 			'<div class="board-cell" data-drag-target-id="#drag-' + i + '">' + randomNumber + '+' + (i - randomNumber) + '</div>');
 	}

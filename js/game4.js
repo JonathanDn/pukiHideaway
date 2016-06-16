@@ -1,41 +1,51 @@
 'use strict';
 
 var animals = [{id: 1,
+               name: 'hippos',
                image: 'img/hippo.png',
                answers: [1, 2, 3, 4, 5],
                correctOptIndex: 1,
                isCorrect: false
                },
                {id: 2,
+               name: 'elephants',
                image: 'img/elephant.png',
                answers: [1, 2, 3, 4, 5],
                correctOptIndex: 1,
                isCorrect: false
                },
                {id: 3,
+               name: 'butterflys',
                image: 'img/butterfly.png',
                answers: [1, 2, 3, 4, 5],
                correctOptIndex: 1,
                isCorrect: false
                },
                {id: 4,
+               name: 'turtles',
                image: 'img/turtle.png',
                answers: [1, 2, 3, 4, 5],
                correctOptIndex: 1,
                isCorrect: false
                },
                {id: 5,
+               name: 'pandas',
                image: 'img/panda.png',
                answers: [1, 2, 3, 4, 5],
                correctOptIndex: 1,
                isCorrect: false
                },
                {id: 6,
+               name: 'dolphins',
                image: 'img/dolphin.png',
                answers: [1, 2, 3, 4, 5],
                correctOptIndex: 1,
                isCorrect: false
                }];
+
+var gChosenAnimal;
+
+// var gAnialAmount;
 
 
 function getAnimalsLocation() {
@@ -44,10 +54,12 @@ function getAnimalsLocation() {
     return elLocation;
 };
 
-function getRandomAnimalImage() {
-    var randAnimal = animals[parseInt(Math.random() * animals.length)].image
-    console.log('randAnimal: ', randAnimal); 
-    return randAnimal;
+function getRandomAnimal() {
+    // get a random animal image:
+    gChosenAnimal = animals[parseInt(Math.random() * animals.length)];
+    // console.log('gChosenAnimal: ', gChosenAnimal);
+    
+    return gChosenAnimal;
 }
 
 function getRandomAmountOfAnimalsToPlace(animalsLocations) {
@@ -60,10 +72,11 @@ function getRandomLocationToPlaceAnimal(animalsLocations) {
     return randLocation;
 }
 
-function getRandomAnimal() {
+function getRandomAnimalHTML() {
     // randomly pick an animal i make a loop and put this string inside it.
+    gChosenAnimal = getRandomAnimal();
     var animalImageHTML = '';
-    animalImageHTML += '<img src="' + getRandomAnimalImage() + '" alt="">';
+    animalImageHTML += '<img src="' + gChosenAnimal.image + '" alt="">';
     return animalImageHTML;
 }
 
@@ -73,7 +86,7 @@ function createAnimals() {
     var animalsLocations = getAnimalsLocation();
     
     // grab random animal species:
-    var randAnimalHTML = getRandomAnimal();
+    var randAnimalHTML = getRandomAnimalHTML();
 
     // grab X amount of animals to place:
     var animalsAmount = getRandomAmountOfAnimalsToPlace(animalsLocations);
@@ -95,6 +108,12 @@ function createAnimals() {
             animalsAmount--;
         }
     }
+    console.log('gChosenAnimal: ', gChosenAnimal);
+    var chosenAnimalSpecies = gChosenAnimal
+    
+    var animalSpecies = document.querySelector('.randAnimalName');
+    animalSpecies.innerHTML = gChosenAnimal.name;
+    
 }
 
 function gameInit(){

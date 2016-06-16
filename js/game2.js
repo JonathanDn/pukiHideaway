@@ -83,78 +83,61 @@ function renderBoard(row) {
 
 		// hide it's text to present a black empty box.
 		elCells2Hide[i].innerText = '';
-		elCells2Hide[i].style.color = 'black';
-		$(elCells2Hide[i]).droppable();
+		//elCells2Hide[i].style.color = 'black';
+		$(elCells2Hide[i]).droppable({
+			accept : '#' + id,
+			/*			accept : function (element) {
+			console.log(element[0]);
+			console.log(element.id,'#'+id);
+			if (element[0].id==='#'+id){	return true}
+			else{return false}
+			},
+			 */
+			drop : ondrop
+		});
+		//		$(elCells2Hide[i]).droppable({
+		//accept : '#'+id,
+		//		accept:function(d){
+		//		if (d.attr('id')==='#'+id) {return true} else {return false}
+		//}
+		//			,drop : function(){
+		//			console.log('wrong');
+		//	}
+		//		});
+
 
 		// turn empty array blocks to --> droppabble. (i + 1) --> create drop1 / drop2 to determine 2 different areas to drop the dragged item.
-		elCells2Hide[i].setAttribute('ondrop', 'drop(event)')
+		//elCells2Hide[i].setAttribute('ondrop', 'drop(event)')
 		//elCells2Hide[i].setAttribute('ondragover', 'allowDrop(event)')
 		//elCells2Hide[i].setAttribute('id', 'drop' + (i + 1));
 	}
 	elLooseBlocks.innerHTML = looseBlocksHTML;
 	$('.leftBlock').draggable({
-		revert : 'invalid'
+		revert : 'invalid',
+		start : function () {
+			// up the total attempts counter
+			gTotalAttemptsCounter++;
+			// update the DOM total attempts counter:
+			var elAttemptsCounter = document.querySelector('.attempts');
+			elAttemptsCounter.innerHTML = gTotalAttemptsCounter;
+		}
 	});
 
 }
 
 // DRAK & DROP:
 
-function allowDrop(ev) {
-	// cancel event ondragover
-	ev.preventDefault();
-}
-function drag(ev) {
-
-	// element that initiated the drag.
-	// identify image after started dragging.
-	// has to be target word(resrved)
-	ev.dataTransfer.setData('content', ev.target.id);
-
-}
-function drop(ev) {
-	// cancel event ondragover
-	console.log('ev: ', ev);
-
-	ev.preventDefault();
-	// identify our content dragged:
-	var draggedNum = ev.dataTransfer.getData("content");
-	var innerHTMLEl2drag = ev.srcElement.innerHTML;
-
-	// APPEND only if the DRAGGED item id === DROP TARGET item id.
-	var draggedNum = ev.dataTransfer.getData("content");
-	// if trying to put drag(1) on drop(2) || drag(2) on drop(1) return!
-	if (draggedNum.substring(4, 5) !== ev.target.id.substring(4, 5)) {
-		// up the total attempts counter
-		gTotalAttemptsCounter++;
-		// update the DOM total attempts counter:
-		var elAttemptsCounter = document.querySelector('.attempts');
-		elAttemptsCounter.innerHTML = gTotalAttemptsCounter;
-		// notfy player he is wrong
-		// alert("Your'e wrong, try again!")
+function ondrop(event, ui) {
+	//this event double-fires alot, make sure it didn't happen this time
+	if (ui.draggable.css('visibility') === 'hidden') {
+//		console.log('misfire again');
 		return;
-	};
+	}
+	event.target.innerHTML = ui.draggable.html();
+	ui.draggable.css('visibility', 'hidden');
 
-	// console.log('ev.target: ', ev.target);
-	ev.target.appendChild(document.getElementById(draggedNum));
-
-	// add back the content:
-	// console.log('innerHTMLEl2drag: ', innerHTMLEl2drag);
-	ev.target.innerHTML = ev.srcElement.innerText;
-
-	// update the cell with the dragged item and color.
-	ev.target.style.color = 'white';
-
-	// up the total attempts counter:
-	gTotalAttemptsCounter++;
-	// update the DOM total attempts counter:
-	var elAttemptsCounter = document.querySelector('.attempts');
-	elAttemptsCounter.innerHTML = gTotalAttemptsCounter;
-
-	// on the first drop ++ the count --> counts the draggables dropped succefully in curr row.
 	gDroppedCounter++;
 
-	// if the count is 2(all hidden blocks are now placed with the dragged blocks)
 	if (gDroppedCounter === NUMS.hiddenBlocks) {
 
 		// everytime I enter this if --> row num is ++
@@ -188,9 +171,4 @@ function drop(ev) {
 		// Reset gDropped --> for the new row level.
 		gDroppedCounter = 0;
 	}
-
-	// notify the player that he is right.
-	// alert('right on!');
-
-
 }

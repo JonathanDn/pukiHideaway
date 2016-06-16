@@ -39,7 +39,8 @@ function initDragAndDrop() {
 
 		$(this).droppable({
 			accept : $(this).data('drag-target-id'),
-			drop : ondrop
+			drop : ondrop,
+			tolerance : 'fit'
 		});
 	});
 }

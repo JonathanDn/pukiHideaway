@@ -1,5 +1,6 @@
 'use strict';
-var AMOUNT=10;
+var AMOUNT = 3;
+var gRemaining = AMOUNT;
 
 $(document).ready(function () {
 	//    verifyChalAccess(2);
@@ -32,21 +33,28 @@ function renderBoard() {
 
 function initDragAndDrop() {
 	$('.sumBlock').draggable();
-	$('.board-cell').
-	//	droppable();
-	each(function () {
+	$('.board-cell').each(function () {
 		//console.log($(this));
 		//console.log($(this).data('drag-target-id'));
 
 		$(this).droppable({
 			accept : $(this).data('drag-target-id'),
-			drop : function (event, ui) {
-				//	$(this)
-				//	.hide();
-				$(this).css("visibility", "hidden");
-				ui.draggable.hide();
-			}
+			drop : ondrop
 		});
-
 	});
+}
+
+function ondrop(event, ui) {
+	//make them invisible - because .hide() will mess up the layout
+	$(this).css("visibility", "hidden");	
+	ui.draggable.css("visibility", "hidden");
+	console.table(event);
+
+	//somehow this event is fired twice every correct drop
+	//this is a workaround
+	gRemaining -= 0.5;
+	//console.log(gRemaining);
+
+	if (gRemaining === 0)
+		alert('you win');
 }

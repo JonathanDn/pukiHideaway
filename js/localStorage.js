@@ -45,3 +45,10 @@ function verifyChalAccess(chal) {
 	}
 	//	return ('access granted');
 }
+
+//Array.contains rarely suported on mobile. so here is a polyfill
+if (!Array.prototype.contains) {
+    Array.prototype.contains = function(s) {
+        return this.indexOf(s) > -1
+    }
+}

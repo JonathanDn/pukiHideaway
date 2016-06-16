@@ -6302,7 +6302,6 @@ footer {
   width: 35%; }
 
 .infoContainer .attemptsCount {
-  display: flex;
   margin: 5px;
   padding-bottom: 100px; }
 

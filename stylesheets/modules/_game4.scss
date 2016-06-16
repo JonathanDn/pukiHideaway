@@ -8,14 +8,13 @@
 
 .question1 {
     color: black;
-    display: flex;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     width: 9em;
     text-align: center;
-    padding: 0.5em;
-    margin: 1em;
-    
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    margin-top: 1em;
 }
 
 
@@ -32,47 +31,83 @@
         
     }
     .animal1 {
-        width: 139px;
-        height: 129px;
+        // width: 139px;
+        // height: 129px;
         align-self: flex-end;
         // background-color: red;
-        background-image: url("../img/hippo.png");
-        background-size: 100%;
-        margin-bottom: 50px;
+        // background-image: url("../img/hippo.png");
+        // background-size: 100%;
+        // margin-bottom: 50px;
         margin-left: 20px;
     }
     .animal2 {
-        width: 139px;
-        height: 129px;
+        // width: 139px;
+        // height: 129px;
         align-self: flex-start;
         // background-color: green;
-        background-image: url("../img/hippo.png");
-        background-size: 100%;
+        // background-image: url("../img/hippo.png");
+        // background-size: 100%;
         margin-right: 70px;
     }
     .animal3 {
-        width: 139px;
-        height: 129px;
+        // width: 139px;
+        // height: 129px;
         align-self: center;
         // background-color: purple;
-        background-image: url("../img/hippo.png");
-        background-size: 100%;
+        // background-image: url("../img/hippo.png");
+        // background-size: 100%;
     }
     .animal4 {
-        width: 139px;
-        height: 129px;
+        // width: 139px;
+        // height: 129px;
         align-self: baseline;
         // background-color: cyan;
-        background-image: url("../img/hippo.png");
-        background-size: 100%;
+        // background-image: url("../img/hippo.png");
+        // background-size: 100%;
         margin-left: 30px;
     }
     .animal5 {
-        width: 139px;
-        height: 129px;
+        // width: 139px;
+        // height: 129px;
         align-self: flex-end;
         // background-color: blue;
-        background-image: url("../img/hippo.png");
-        background-size: 100%;
+        // background-image: url("../img/hippo.png");
+        // background-size: 100%;
     }
+}
+
+
+.howMany {
+    border: 1px solid black;    
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    padding-top: 10px;
+    margin: auto;
+    height: 80px;
+
+    .option {
+        position: relative;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        // border: 1px solid black;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        // background-color: darkcyan;
+        .optionText{    
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+// if screen is lower then 412 px width cange proportions
+@media(max-width:412px){
+    .animal img {
+        max-width: 80px;
+    }
+    
 }

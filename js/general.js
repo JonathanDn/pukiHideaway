@@ -46,6 +46,9 @@ function verifyChalAccess(chal) {
 	//	return ('access granted');
 }
 
+function randomInt(max){
+	return parseInt(Math.random()*max);
+}
 //Array.includes rarely suported on mobile (failed on 2/2 phones), so here is a polyfill
 if (!Array.prototype.includes) {
     Array.prototype.includes = function(s) {

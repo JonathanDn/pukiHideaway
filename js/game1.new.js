@@ -34,7 +34,9 @@ var quests = [{
 		isCorrect : false
 	}
 ];
+
 var gCurrQuestion = 0;
+var gAnswersAmount = 2;
 // init game 1
 $(document).ready(function () {
 	game1Init();
@@ -55,15 +57,26 @@ function renderQuestion(questionNumber) {
 	// check if previous record of player exists in local storage.
 	// localStorage.getItem('');
 
-	var elFirstAnswer = document.querySelector('.answerBar1');
-	var elSecondAnswer = document.querySelector('.answerBar2');
+	//var elFirstAnswer = document.querySelector('.answerBar1');
+	//var elSecondAnswer = document.querySelector('.answerBar2');
 	var elImage = document.querySelector('.changingImg');
-
-	//add the correct answer to the list
+	var elsAnswers=document.querySelectorAll('.answerBar');
+	//add the correct answer(s) to the list
 	var answerNumbers = [quests[questionNumber].correctOptIndex];
-	while(answerNumbers.length<gAnswersAmount){
-		
+	while (answerNumbers.length < gAnswersAmount) {
+			//debugger;
+		var randonAnswerNum = randomInt(quests[questionNumber].answers.length);
+		if (!answerNumbers.includes(randonAnswerNum)) {
+			var newRandomOrder = randomInt(answerNumbers.length + 1);
+			answerNumbers.splice(newRandomOrder,0,randonAnswerNum)
+		}
 	}
+	answerNumbers.forEach(function(answerNum,i){
+		elsAnswers[i].textContent=quests[questionNumber].answers[answerNum]
+	
+	});
+	return;	
+	
 	// render the 5th FINAL question content
 	if (quests[3].isCorrect) {
 		// console.log('here');

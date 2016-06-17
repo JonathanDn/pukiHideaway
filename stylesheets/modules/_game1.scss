@@ -82,11 +82,12 @@ body {
         font-size: 200%;
     }
     .bearContainer {
-        padding-top: 60px;
-        padding-bottom: 40px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        max-width: 90%;
     }
     .answerOptionsItem3 {
-        height: 30vh;
+        height: 20vh;
         max-width: 380px;
         .answerBar1 {
             font-size: 120%;        
@@ -100,41 +101,72 @@ body {
 
 // modiciation for iphone 6 n 4 vertical!
 @media (max-width: 400px) and (max-height: 700px) {
-    .game1 {
-        height: 80vh;
-    }
-    .headerText {
-        font-size: 200%;
-    }
+
+
     .bearContainer {
+        max-width: 100%;
         padding-top: 60px;
         padding-bottom: 40px;
+        .teddyItem1 {
+            max-width: 130px;
+        }
+
+        .changingImg {
+            max-width: 130px;
+        }
+    }
+
+    .game1 {
+        height: 80vh;
+        max-width: 90%;
+    }
+    .headerText {
+        font-size: 150%;
     }
     .answerOptionsItem3 {
-        height: 30vh;
-        max-width: 380px;
+        height: 80px;
+        max-width: 100%;
         .answerBar1 {
-            font-size: 90%;        
+            font-size: 75%;        
         }
         .answerBar2 {
-            font-size: 90%;
+            font-size: 75%;
         }
     }
 }
 
-// modification for iphone 6 n 4 horizontal
-@media (max-height: 430px) {
+// modification for iphone 6 
+@media (max-height: 380px) {
     .game1 {
-        height: 80vh;
+        height: 70vh;
+        max-width: 95%;
     }
-    .headerText {
-        font-size: 170%;
-    }
+
+    // change bear image porportions:
     .teddyItem1 {
-        max-width: 150px;
+        max-width: 110px;
     }
     .changingImg {
-        max-width: 150px;
+        max-width: 110px;
+    }
+
+
+    .bearContainer {
+        max-width: 95%;
+    }
+    .headerText {
+        font-size: 130%;
     }
     
+}
+
+// iPhone 4 horizontal less then 320px
+@media (max-height: 340px) {
+    // change bear image porportions:
+    .teddyItem1 {
+        max-width: 90px;
+    }
+    .changingImg {
+        max-width: 90px;
+    }
 }

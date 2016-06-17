@@ -6633,17 +6633,17 @@ float:left;}
 @media (max-height: 600px) {
   .game4Header {
     height: 100vh;
-    width: 100vw; }
+    width: 100%; }
   .animalWrap {
-    height: 62vh;
-    width: 75vw; } }
+    height: 60vh;
+    width: 80%; } }
 
 @media (max-height: 400px) {
   .game4Header {
     height: 100vh;
-    width: 100vw; }
+    width: 100%; }
   .animalWrap {
-    height: 55vh; } }
+    height: 55%; } }
 
 body {
   max-width: 600px;

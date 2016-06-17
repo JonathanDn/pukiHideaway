@@ -45,7 +45,29 @@ var animals = [{id: 1,
 
 var gChosenAnimal;
 
-// var gAnialAmount;
+var gAnimalAmount;
+
+var gGuessedAmount;
+
+function compareAmounts() {
+    console.log('gAnimalAmount: ', gAnimalAmount);
+    console.log('gGuessedAmount: ', gGuessedAmount);
+    
+    if (gAnimalAmount === gGuessedAmount) {
+        alert('You win!')
+    } else {
+        alert('Wrong Guess...');
+    }
+}
+
+function checkUserGuess(elAmount) {
+    // console.log('here');
+    // grab the child of this element and show it's innerHTML
+    // console.log('elAmount.childNodes[0].innerHTML: ', elAmount.childNodes[0].innerHTML);
+    gGuessedAmount = +elAmount.childNodes[0].innerHTML;
+    // console.log('gGuessedAmount: ', gGuessedAmount);
+    compareAmounts();
+}
 
 
 function getAnimalsLocation() {
@@ -63,8 +85,10 @@ function getRandomAnimal() {
 }
 
 function getRandomAmountOfAnimalsToPlace(animalsLocations) {
-    var randAmountOfAnimalsToPlace = parseInt(Math.random() * animalsLocations.length) + 1;
-    return randAmountOfAnimalsToPlace;
+    gAnimalAmount = parseInt(Math.random() * animalsLocations.length) + 1;
+    // console.log('gAnimalAmount: ', gAnimalAmount);
+    
+    return gAnimalAmount;
 }
 
 function getRandomLocationToPlaceAnimal(animalsLocations) {
@@ -118,6 +142,7 @@ function createAnimals() {
 
 function gameInit(){
     createAnimals();
+    
 }
 
 

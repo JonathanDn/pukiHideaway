@@ -135,22 +135,21 @@
         width: 100vw;
     }
     .animalWrap{
-        height: 55vh;
-        width: 90vw;
+        height: 65vh;
+        width: 75vw;
     }
 }
 
 // responsive in iPhone4(small screen horizontal)
 @media(max-height: 400px) {
     .game4Header{
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
     }
     .animalWrap{
         height: 55vh;
     }
-    img {
-        width: 80px;
-        height: 80px;
+    .animal img {
+        max-width: 80px;
     }
 }

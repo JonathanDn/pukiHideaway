@@ -56,6 +56,8 @@ function compareAmounts() {
     console.log('gGuessedAmount: ', gGuessedAmount);
     if (gAnimalAmount === gGuessedAmount) {
         gCorrectGuesses++
+        console.log('gCorrectGuesses: ', gCorrectGuesses);
+        
         alert('Right Guess!');
         if (gCorrectGuesses === 5) {
             var elSuccessBtn = document.querySelector('.backMenuBtn');
@@ -73,9 +75,10 @@ function checkUserGuess(elAmount) {
     // console.log('here');
     // grab the child of this element and show it's innerHTML
     // console.log('elAmount.childNodes[0].innerHTML: ', elAmount.childNodes[0].innerHTML);
-    gGuessedAmount = +elAmount.childNodes[0].innerHTML;
+    gGuessedAmount = (+elAmount.childNodes[0].innerHTML);
     // console.log('gGuessedAmount: ', gGuessedAmount);
     compareAmounts();
+    // gAnimalAmount;
 }
 
 
@@ -94,10 +97,10 @@ function getRandomAnimal() {
 }
 
 function getRandomAmountOfAnimalsToPlace(animalsLocations) {
-    gAnimalAmount = parseInt(Math.random() * animalsLocations.length) + 1;
-    // console.log('gAnimalAmount: ', gAnimalAmount);
-    
-    return gAnimalAmount;
+    // round up to make 1-5 options only.
+    var currAnimalAmountToPlace = parseInt(Math.random() * animalsLocations.length + 1);
+    // console.log('currAnimalAmountToPlace: ', currAnimalAmountToPlace);
+    return currAnimalAmountToPlace;
 }
 
 function getRandomLocationToPlaceAnimal(animalsLocations) {
@@ -115,19 +118,18 @@ function getRandomAnimalHTML() {
 
 
 function createAnimals() {
-    console.log('here');
+    // console.log('here');
 
     // zeroize the amount of animals placed to 0:
     // grab all divs that contain img and change their innerHTML to ''.
     if (gAnimalAmount > 0) {
         console.log('here as well');
-        
         var elAnimalLocations = getAnimalsLocation();
-        console.log('elAnimalLocations: ', elAnimalLocations);
+        // console.log('elAnimalLocations: ', elAnimalLocations);
         for (var i = 0; i < elAnimalLocations.length; i++) {
             // console.log('here 3');
             // console.log('elAnimalLocations[i].childNodes[0]: ', elAnimalLocations[i].childNodes[0]);
-            console.log('elAnimalLocations[i].innerHTML: ', elAnimalLocations[i].innerHTML);
+            // console.log('elAnimalLocations[i].innerHTML: ', elAnimalLocations[i].innerHTML);
             // clean previous animals before printing new ones.
             elAnimalLocations[i].innerHTML = '';
         }
@@ -137,30 +139,45 @@ function createAnimals() {
     var animalsLocations = getAnimalsLocation();
 
     // grab X amount of animals to place:
-    var animalsAmount = getRandomAmountOfAnimalsToPlace(animalsLocations);
+    var currAnimalAmount = getRandomAmountOfAnimalsToPlace(animalsLocations);
+    
+    // actual amount of animals placed 
+    gAnimalAmount = currAnimalAmount;
+    // update global curr amount of animals to whats actually printed
     
     // grab random animal species:
     var randAnimalHTML = getRandomAnimalHTML();
 
     // console.log('randAmountOfAnimalsToPlace: ', randAmountOfAnimalsToPlace);
+    console.log('currAnimalAmount before while: ', currAnimalAmount);
     
     // for the given amount of animals to place this round start placing:
-    while (animalsAmount > 0) {
-        
+    while (currAnimalAmount > 0) {
         // create rand location for animal:
         var randLoc = getRandomLocationToPlaceAnimal(animalsLocations);
         
         // if there is no animal; in this location:
-        if (animalsLocations[randLoc].childNodes[0] !== '') {
+        // console.log('animalsLocations[randLoc].innerHTML: ', animalsLocations[randLoc].innerHTML);
+        
+        if (animalsLocations[randLoc].innerHTML !== '' || animalsLocations[randLoc].innerHTML === 1) {
             // console.log('here 2');
 
-            // place it:
-            animalsLocations[randLoc].innerHTML = randAnimalHTML;
-            // - the given amount of animals to place until you reach 0 and exit while
-            animalsAmount--;
+            // the CONFLICT happens when randloc repeats and han an animal is pushed twice to the same place.
+            // console.log('currAnimalAmountInWhile: ', currAnimalAmount);
+
+            // if randLoc already CONTAINS IMAGE! --> go back to the beginning of the loop choose an other randLoc
+            if(animalsLocations[randLoc].innerHTML === randAnimalHTML) {
+                console.log('contains image');
+                continue;
+            }
         }
+        
+        // if passed that if --> create the animal
+        // if it's a NEW RAND LOCATION --> place it:
+        animalsLocations[randLoc].innerHTML = randAnimalHTML;
+
+        currAnimalAmount--;
     }
-    // console.log('gChosenAnimal: ', gChosenAnimal);
     var chosenAnimalSpecies = gChosenAnimal
     
     var animalSpecies = document.querySelector('.randAnimalName');

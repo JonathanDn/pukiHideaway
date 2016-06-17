@@ -47,7 +47,7 @@ function initDragAndDrop() {
 
 function ondrop(event, ui) {
 	//make them invisible - because .hide() will mess up the layout
-	$(this).css("visibility", "hidden");	
+	$(this).css("visibility", "hidden");
 	ui.draggable.css("visibility", "hidden");
 	console.table(event);
 
@@ -56,6 +56,10 @@ function ondrop(event, ui) {
 	gRemaining -= 0.5;
 	//console.log(gRemaining);
 
-	if (gRemaining === 0)
-		alert('you win');
+	if (gRemaining === 0) {
+		//show the continue button to next challanges
+		$('.nextChallangeContainer').show();
+		// save progress to local storage.
+		saveCurrChal(3);
+	}
 }

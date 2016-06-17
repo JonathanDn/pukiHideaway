@@ -6553,7 +6553,7 @@ float:left;}
 .game4Header {
   background-image: url("../img/game4background.jpg");
   height: 100vh;
-  max-width: 100vw; }
+  width: 100%; }
 
 .header {
   display: flex;
@@ -6635,7 +6635,7 @@ float:left;}
     height: 100vh;
     width: 100vw; }
   .animalWrap {
-    height: 65vh;
+    height: 62vh;
     width: 75vw; } }
 
 @media (max-height: 400px) {

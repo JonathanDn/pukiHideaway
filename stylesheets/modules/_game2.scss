@@ -1,7 +1,9 @@
+
 .game2 {
     border: 1px solid black;
     display:flex;
     height: 500px;
+	flex-wrap: wrap;
     // flex-direction: row;
     // margin: auto;
 }
@@ -12,7 +14,8 @@
     padding-top: 30px;
     background: green;
     border: 1px solid black;
-    width: 100%
+    //width: 100%
+	max-width:500px;
 }
 
 
@@ -114,3 +117,48 @@
         
     }
 }
+
+
+/*
+table{
+border:1px solid black;
+outline: 1px solid black;
+}
+
+.cell {
+    color: white;
+    background: black;
+    border: 1px solid white;
+    height: 32px;
+    //width: 36px;
+	width:3em;
+    text-align: center;
+    padding: 10px;
+
+    //.rightBlockNum {
+    //    // center on x / y axises --> anchor the text
+    //    position: absolute;
+    //    top: 50%;
+    //    transform: translate(-50%,-50%);
+    //}
+}
+.leftBlock {
+    color: white;
+    background: black;
+    border: 1px solid white;
+    outline: 1px solid black;
+    //position: relative;
+    height: 32px;
+    width: 36px;
+    text-align: center;
+    //.leftBlockNum {
+    //    // center on x / y axises --> anchor the text
+    //    position: absolute;
+    //    top: 50%;
+    //    transform: translate(-50%,-50%);
+    //}
+}
+
+.boardContainer{
+float:left;}
+*/

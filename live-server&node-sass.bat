@@ -1,4 +1,4 @@
 @echo off
 start live-server
 start cmd
-node-sass -w . -d .
+node-sass -w . -o .

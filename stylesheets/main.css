@@ -6229,7 +6229,7 @@ footer {
   text-align: center;
   color: #777; }
 
-body {
+.game1Body {
   background-image: url("../img/game1Background.jpg"); }
 
 .game1Header .headerText {

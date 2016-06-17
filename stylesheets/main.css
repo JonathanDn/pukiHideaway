@@ -6281,6 +6281,22 @@ body {
   width: 120px;
   margin: auto; }
 
+@media (max-width: 415px) and (max-height: 750px) {
+  .game1 {
+    height: 80vh; }
+  .headerText {
+    font-size: 200%; }
+  .bearContainer {
+    padding-top: 60px;
+    padding-bottom: 40px; }
+  .answerOptionsItem3 {
+    height: 30vh;
+    max-width: 380px; }
+  .answerOptionsItem3 .answerBar1 {
+    font-size: 120%; }
+  .answerOptionsItem3 .answerBar2 {
+    font-size: 120%; } }
+
 @media (max-width: 400px) and (max-height: 700px) {
   .game1 {
     height: 80vh; }
@@ -6297,7 +6313,7 @@ body {
   .answerOptionsItem3 .answerBar2 {
     font-size: 90%; } }
 
-@media (max-height: 400px) {
+@media (max-height: 430px) {
   .game1 {
     height: 80vh; }
   .headerText {

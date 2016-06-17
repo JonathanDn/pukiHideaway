@@ -57,11 +57,14 @@ function compareAmounts() {
     if (gAnimalAmount === gGuessedAmount) {
         gCorrectGuesses++
         console.log('gCorrectGuesses: ', gCorrectGuesses);
+        console.log('Right guess!');
         
-        alert('Right Guess!');
+        // alert('Right Guess!');
         if (gCorrectGuesses === 5) {
             var elSuccessBtn = document.querySelector('.backMenuBtn');
             elSuccessBtn.style.display = 'block';
+            // update local storage to life lock on last stage.
+            saveCurrChal(3); 
             alert('You Won!!')
         }
     } else {
@@ -118,7 +121,7 @@ function getRandomAnimalHTML() {
 
 
 function createAnimals() {
-    // console.log('here');
+    // preperations for second round of game:
 
     // zeroize the amount of animals placed to 0:
     // grab all divs that contain img and change their innerHTML to ''.
@@ -156,22 +159,17 @@ function createAnimals() {
         // create rand location for animal:
         var randLoc = getRandomLocationToPlaceAnimal(animalsLocations);
         
-        // if there is no animal; in this location:
-        // console.log('animalsLocations[randLoc].innerHTML: ', animalsLocations[randLoc].innerHTML);
-        
+        // if there is no animal; in this location place one.
         if (animalsLocations[randLoc].innerHTML !== '' || animalsLocations[randLoc].innerHTML === 1) {
-            // console.log('here 2');
-
             // the CONFLICT happens when randloc repeats and han an animal is pushed twice to the same place.
-            // console.log('currAnimalAmountInWhile: ', currAnimalAmount);
 
             // if randLoc already CONTAINS IMAGE! --> go back to the beginning of the loop choose an other randLoc
             if(animalsLocations[randLoc].innerHTML === randAnimalHTML) {
-                console.log('contains image');
+                // console.log('contains image');
                 continue;
             }
         }
-        
+
         // if passed that if --> create the animal
         // if it's a NEW RAND LOCATION --> place it:
         animalsLocations[randLoc].innerHTML = randAnimalHTML;

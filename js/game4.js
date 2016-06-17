@@ -66,6 +66,7 @@ function compareAmounts() {
             // update local storage to life lock on last stage.
             saveCurrChal(3); 
             alert('You Won!!')
+            return;
         }
     } else {
         alert('Wrong Guess...');

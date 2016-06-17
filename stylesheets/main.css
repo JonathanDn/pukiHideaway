@@ -6283,7 +6283,7 @@ body {
 
 @media (max-width: 400px) and (max-height: 700px) {
   .game1 {
-    height: 80vh; }
+    height: 85vh; }
   .headerText {
     font-size: 200%; }
   .bearContainer {
@@ -6292,11 +6292,13 @@ body {
   .answerOptionsItem3 {
     height: 30vh; }
   .answerOptionsItem3 .answerBar1 {
-    font-size: 200%; }
+    font-size: 170%; }
   .answerOptionsItem3 .answerBar2 {
-    font-size: 200%; } }
+    font-size: 170%; } }
 
 @media (max-height: 400px) {
+  .game1 {
+    height: 80vh; }
   .headerText {
     font-size: 170%; }
   .teddyItem1 {

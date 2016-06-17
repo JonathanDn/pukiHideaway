@@ -6229,7 +6229,7 @@ footer {
   text-align: center;
   color: #777; }
 
-body {
+.game1Body {
   background-image: url("../img/game1Background.jpg"); }
 
 .game1Header .headerText {
@@ -6285,7 +6285,7 @@ body {
   .game1 {
     height: 80vh; }
   .headerText {
-    font-size: 200%; }
+    font-size: 150%; }
   .bearContainer {
     padding-top: 40px;
     padding-bottom: 30px;
@@ -6304,12 +6304,11 @@ body {
     padding-top: 60px;
     padding-bottom: 40px; }
   .bearContainer .teddyItem1 {
-    max-width: 130px; }
+    max-width: 120px; }
   .bearContainer .changingImg {
-    max-width: 130px; }
+    max-width: 120px; }
   .game1 {
-    height: 80vh;
-    max-width: 90%; }
+    height: 80vh; }
   .headerText {
     font-size: 150%; }
   .answerOptionsItem3 {
@@ -6320,16 +6319,13 @@ body {
   .answerOptionsItem3 .answerBar2 {
     font-size: 75%; } }
 
-@media (max-height: 380px) {
+@media (max-height: 500px) {
   .game1 {
-    height: 70vh;
-    max-width: 95%; }
+    height: 80vh; }
   .teddyItem1 {
     max-width: 110px; }
   .changingImg {
     max-width: 110px; }
-  .bearContainer {
-    max-width: 95%; }
   .headerText {
     font-size: 130%; } }
 

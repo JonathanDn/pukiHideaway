@@ -1,12 +1,31 @@
 
+
 // Parent container
 .game1 {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
+    max-width: 95%;
+    height: 90vh;
 }
+
+
+.game1Header {
+    border: 1px solid black;
+    background-image: url('../img/game1Background.jpg');
+    max-width: 95%;
+    height: 100vh;
+    .headerText {
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+}
+
+
 // bear container within parent
 .bearContainer {
-    // border: 1px solid black;
+    border: 1px solid black;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -29,11 +48,12 @@
 
 // child3 CONTAINER of answeres
 .answerOptionsItem3 {
+    border: 1px solid black;
     display:flex;
     flex-direction: column;
     // justify-content: space-around;
     margin: auto;
-    height: 100px;
+    height: 30vh;
     .answerBar1 {
         margin: 0.5em;
     }
@@ -42,14 +62,6 @@
     }
 }
 
-.game1Header {
-    background-image: url('../img/game1Background.jpg');
-    .headerText {
-        display: flex;
-        justify-content: center;
-        color: white;
-    }
-}
 
 
 // next chal button container and button - currently hidden from display
@@ -66,7 +78,20 @@
     }
 }
 
+@media (max-width: 600px) {
+    .headerText {
+        font-size: 170%;
+    }
+}
 
-// .nextChallange {
-
-// }
+@media (max-height: 400px) {
+    .teddyItem1 {
+        max-width: 150px;
+    }
+    .changingImg {
+        max-width: 150px;
+    }
+    .game1 {
+        height: 80vh;
+    }
+}

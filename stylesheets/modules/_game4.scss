@@ -2,7 +2,7 @@
 .game4Header {
     background-image: url("../img/game4background.jpg");
     height: 100vh;
-    max-width: 700px;
+    max-width: 100vw;
     // background-color: green;
 } 
 
@@ -128,11 +128,29 @@
     
 }
 
+// responsive in iPhone4(small screen vertical)
 @media(max-height: 600px) {
     .game4Header{
-        height: 480px;
+        height: 100vh;
+        width: 100vw;
     }
     .animalWrap{
-        height: 300px;
+        height: 55vh;
+        width: 90vw;
+    }
+}
+
+// responsive in iPhone4(small screen horizontal)
+@media(max-height: 400px) {
+    .game4Header{
+        height: 100vh;
+        width: 100vw;
+    }
+    .animalWrap{
+        height: 55vh;
+    }
+    img {
+        width: 80px;
+        height: 80px;
     }
 }

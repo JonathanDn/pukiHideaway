@@ -1,26 +1,23 @@
 
 
-// Parent container
-.game1 {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    max-width: 95%;
+body {
+    background-image: url('../img/game1Background.jpg');
 }
 
-
 .game1Header {
-    border: 1px solid black;
-    background-image: url('../img/game1Background.jpg');
-    max-width: 95%;
+    // border: 1px solid black;
     .headerText {
         display: flex;
         justify-content: center;
         color: white;
     }
 }
-
-
+// Parent container
+.game1 {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
 // bear container within parent
 .bearContainer {
     border: 1px solid black;
@@ -51,7 +48,7 @@
     flex-direction: column;
     // justify-content: space-around;
     margin: auto;
-    height: 30vh;
+    height: 100px;
     .answerBar1 {
         margin: 0.5em;
     }
@@ -76,17 +73,40 @@
     }
 }
 
-@media (max-width: 600px) {
+
+// modiciation for iphone 6 n 4 vertical!
+@media (max-width: 400px) and (max-height: 700px) {
+    .game1 {
+        height: 80vh;
+    }
     .headerText {
         font-size: 200%;
     }
+    .bearContainer {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    .answerOptionsItem3 {
+        height: 30vh;
+        .answerBar1 {
+            font-size: 200%;
+        }
+        .answerBar2 {
+            font-size: 200%;
+        }
+    }
 }
 
+// modification for iphone 6 n 4 horizontal
 @media (max-height: 400px) {
+    .headerText {
+        font-size: 170%;
+    }
     .teddyItem1 {
         max-width: 150px;
     }
     .changingImg {
         max-width: 150px;
     }
+    
 }

@@ -6508,7 +6508,7 @@ footer {
 
 .game4Header {
   background-image: url("../img/game4background.jpg");
-  height: 650px;
+  height: 100vh;
   max-width: 700px; }
 
 .header {
@@ -6527,23 +6527,19 @@ footer {
   color: black;
   font-size: 20px;
   font-weight: bold;
-  width: 9em;
+  width: 10em;
   text-align: center;
-  padding-top: 0.5em;
   padding-left: 0.5em;
-  margin-top: 1em; }
+  margin-top: 0.3em; }
 
 .animalWrap {
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 450px;
+  height: 70vh;
   width: 90%;
   margin: auto; }
-
-.animalWrap .animal {
-  border: 1px solid black; }
 
 .animalWrap .animal1 {
   align-self: flex-end;
@@ -6570,7 +6566,7 @@ footer {
   width: 80%;
   padding-top: 10px;
   margin: auto;
-  height: 80px; }
+  height: 15vh; }
 
 .howMany .option {
   position: relative;
@@ -6589,6 +6585,12 @@ footer {
 @media (max-width: 412px) {
   .animal img {
     max-width: 80px; } }
+
+@media (max-height: 600px) {
+  .game4Header {
+    height: 480px; }
+  .animalWrap {
+    height: 300px; } }
 
 body {
   max-width: 600px;

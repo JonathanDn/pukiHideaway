@@ -6288,8 +6288,7 @@ footer {
     font-size: 150%; }
   .bearContainer {
     padding-top: 40px;
-    padding-bottom: 30px;
-    max-width: 90%; }
+    padding-bottom: 30px; }
   .answerOptionsItem3 {
     height: 20vh;
     max-width: 380px; }
@@ -6301,7 +6300,8 @@ footer {
 @media (max-width: 400px) and (max-height: 700px) {
   .bearContainer {
     padding-top: 60px;
-    padding-bottom: 40px; }
+    padding-bottom: 40px;
+    margin: auto; }
   .bearContainer .teddyItem1 {
     max-width: 120px; }
   .bearContainer .changingImg {
@@ -6313,9 +6313,9 @@ footer {
   .answerOptionsItem3 {
     height: 80px; }
   .answerOptionsItem3 .answerBar1 {
-    font-size: 75%; }
+    font-size: 90%; }
   .answerOptionsItem3 .answerBar2 {
-    font-size: 75%; } }
+    font-size: 90%; } }
 
 @media (max-height: 500px) {
   .game1 {
@@ -6325,7 +6325,9 @@ footer {
   .changingImg {
     max-width: 110px; }
   .headerText {
-    font-size: 130%; } }
+    font-size: 130%; }
+  .bearContainer {
+    margin: auto; } }
 
 @media (max-height: 340px) {
   .teddyItem1 {

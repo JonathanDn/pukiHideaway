@@ -84,7 +84,6 @@
     .bearContainer {
         padding-top: 40px;
         padding-bottom: 30px;
-        max-width: 90%;
         
     }
     .answerOptionsItem3 {
@@ -107,6 +106,7 @@
     .bearContainer {
         padding-top: 60px;
         padding-bottom: 40px;
+        margin: auto;
         .teddyItem1 {
             max-width: 120px;
         }
@@ -125,10 +125,10 @@
     .answerOptionsItem3 {
         height: 80px;
         .answerBar1 {
-            font-size: 75%;        
+            font-size: 90%;        
         }
         .answerBar2 {
-            font-size: 75%;
+            font-size: 90%;
         }
     }
 }
@@ -149,6 +149,9 @@
 
     .headerText {
         font-size: 130%;
+    }
+    .bearContainer {
+        margin: auto;
     }
     
 }

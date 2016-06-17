@@ -2,10 +2,15 @@
 var EASY = 0;
 var MEDIUM = 1;
 var HARD = 2;
+var DIFFICULTYTEXT=[];
+DIFFICULTYTEXT[EASY]='easy';
+DIFFICULTYTEXT[MEDIUM]='medium';
+DIFFICULTYTEXT[HARD]='hard';
+var LOCALSTORAGEKEY='pukisHideawayByRobertAndJonny';
 
 //returns current difficulty (from localstorage)
 function loadGameDifficulty() {
-	var difficulty = localStorage.getItem('pukisHideawayByRobertAndJonnyDifficulty');
+	var difficulty = localStorage.getItem(LOCALSTORAGEKEY+'Difficulty');
 	if (difficulty === null) {
 		difficulty = EASY;
 	}
@@ -14,7 +19,7 @@ function loadGameDifficulty() {
 
 //returns current unlocked chal
 function loadCurrChal() {
-	var currChal = localStorage.getItem('pukisHideawayByRobertAndJonnyCurrChal');
+	var currChal = localStorage.getItem(LOCALSTORAGEKEY+'CurrChal');
 	if (currChal === null) {
 		currChal = 0;
 	}
@@ -23,14 +28,14 @@ function loadCurrChal() {
 
 //updates difficulty (to be used by the main menu when the user changes difficulty)
 function saveGameDifficulty(difficulty) {
-	localStorage.pukisHideawayByRobertAndJonnyDifficulty = difficulty;
+	localStorage.setItem(LOCALSTORAGEKEY+'Difficulty',difficulty);
 }
 
 //updates current unlocked chal (to be used when the user finishes a chal)
 function saveCurrChal(currChal) {
 	// curr chal in local storage < then curr chal.
 	if (loadCurrChal() < currChal) {
-		localStorage.pukisHideawayByRobertAndJonnyCurrChal = currChal;
+		localStorage.setItem(LOCALSTORAGEKEY+'CurrChal',currChal);
 	}
 }
 
@@ -44,6 +49,10 @@ function verifyChalAccess(chal) {
 		//		return ('acting');
 	}
 	//	return ('access granted');
+}
+
+function randomInt(max){
+	return parseInt(Math.random()*max);
 }
 
 //Array.includes rarely suported on mobile (failed on 2/2 phones), so here is a polyfill

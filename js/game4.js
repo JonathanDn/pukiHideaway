@@ -49,15 +49,24 @@ var gAnimalAmount;
 
 var gGuessedAmount;
 
+var gCorrectGuesses = 0;
+
 function compareAmounts() {
     console.log('gAnimalAmount: ', gAnimalAmount);
     console.log('gGuessedAmount: ', gGuessedAmount);
-    
     if (gAnimalAmount === gGuessedAmount) {
-        alert('You win!')
+        gCorrectGuesses++
+        alert('Right Guess!');
+        if (gCorrectGuesses === 5) {
+            var elSuccessBtn = document.querySelector('.backMenuBtn');
+            elSuccessBtn.style.display = 'block';
+            alert('You Won!!')
+        }
     } else {
         alert('Wrong Guess...');
     }
+    // if game still not won shuffle it again
+    createAnimals();
 }
 
 function checkUserGuess(elAmount) {
@@ -72,7 +81,7 @@ function checkUserGuess(elAmount) {
 
 function getAnimalsLocation() {
     var elLocation = document.querySelectorAll('.animal');
-    console.log('elLocation: ', elLocation);
+    // console.log('elLocation: ', elLocation);
     return elLocation;
 };
 
@@ -106,14 +115,33 @@ function getRandomAnimalHTML() {
 
 
 function createAnimals() {
+    console.log('here');
+
+    // zeroize the amount of animals placed to 0:
+    // grab all divs that contain img and change their innerHTML to ''.
+    if (gAnimalAmount > 0) {
+        console.log('here as well');
+        
+        var elAnimalLocations = getAnimalsLocation();
+        console.log('elAnimalLocations: ', elAnimalLocations);
+        for (var i = 0; i < elAnimalLocations.length; i++) {
+            // console.log('here 3');
+            // console.log('elAnimalLocations[i].childNodes[0]: ', elAnimalLocations[i].childNodes[0]);
+            console.log('elAnimalLocations[i].innerHTML: ', elAnimalLocations[i].innerHTML);
+            // clean previous animals before printing new ones.
+            elAnimalLocations[i].innerHTML = '';
+        }
+    }
+
     // grab the all possible animal locations:
     var animalsLocations = getAnimalsLocation();
+
+    // grab X amount of animals to place:
+    var animalsAmount = getRandomAmountOfAnimalsToPlace(animalsLocations);
     
     // grab random animal species:
     var randAnimalHTML = getRandomAnimalHTML();
 
-    // grab X amount of animals to place:
-    var animalsAmount = getRandomAmountOfAnimalsToPlace(animalsLocations);
     // console.log('randAmountOfAnimalsToPlace: ', randAmountOfAnimalsToPlace);
     
     // for the given amount of animals to place this round start placing:
@@ -122,8 +150,8 @@ function createAnimals() {
         // create rand location for animal:
         var randLoc = getRandomLocationToPlaceAnimal(animalsLocations);
         
-        // if there is no anima; in this location:
-        if (animalsLocations[randLoc].children.length === 0) {
+        // if there is no animal; in this location:
+        if (animalsLocations[randLoc].childNodes[0] !== '') {
             // console.log('here 2');
 
             // place it:
@@ -132,7 +160,7 @@ function createAnimals() {
             animalsAmount--;
         }
     }
-    console.log('gChosenAnimal: ', gChosenAnimal);
+    // console.log('gChosenAnimal: ', gChosenAnimal);
     var chosenAnimalSpecies = gChosenAnimal
     
     var animalSpecies = document.querySelector('.randAnimalName');

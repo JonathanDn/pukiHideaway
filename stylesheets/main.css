@@ -6229,21 +6229,18 @@ footer {
   text-align: center;
   color: #777; }
 
-.game1 {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  max-width: 95%; }
-
-.game1Header {
-  border: 1px solid black;
-  background-image: url("../img/game1Background.jpg");
-  max-width: 95%; }
+body {
+  background-image: url("../img/game1Background.jpg"); }
 
 .game1Header .headerText {
   display: flex;
   justify-content: center;
   color: white; }
+
+.game1 {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column; }
 
 .bearContainer {
   border: 1px solid black;
@@ -6266,7 +6263,7 @@ footer {
   display: flex;
   flex-direction: column;
   margin: auto;
-  height: 30vh; }
+  height: 100px; }
 
 .answerOptionsItem3 .answerBar1 {
   margin: 0.5em; }
@@ -6284,11 +6281,26 @@ footer {
   width: 120px;
   margin: auto; }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) and (max-height: 700px) {
+  .game1 {
+    height: 85vh; }
   .headerText {
-    font-size: 200%; } }
+    font-size: 200%; }
+  .bearContainer {
+    padding-top: 80px;
+    padding-bottom: 40px; }
+  .answerOptionsItem3 {
+    height: 30vh; }
+  .answerOptionsItem3 .answerBar1 {
+    font-size: 170%; }
+  .answerOptionsItem3 .answerBar2 {
+    font-size: 170%; } }
 
 @media (max-height: 400px) {
+  .game1 {
+    height: 80vh; }
+  .headerText {
+    font-size: 170%; }
   .teddyItem1 {
     max-width: 150px; }
   .changingImg {

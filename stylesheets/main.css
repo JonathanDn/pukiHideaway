@@ -6635,8 +6635,7 @@ float:left;}
     height: 100vh;
     width: 100%; }
   .animalWrap {
-    height: 60vh;
-    width: 80%; } }
+    height: 60vh; } }
 
 @media (max-height: 400px) {
   .game4Header {

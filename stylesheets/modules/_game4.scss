@@ -121,7 +121,7 @@
 
 
 // if screen is lower then 412 px width cange proportions
-@media(max-width:412px){
+@media(max-width:412px) or @media(max-height: 400px){
     .animal img {
         max-width: 80px;
     }
@@ -148,8 +148,5 @@
     }
     .animalWrap{
         height: 55vh;
-    }
-    .animal img {
-        max-width: 80px;
     }
 }

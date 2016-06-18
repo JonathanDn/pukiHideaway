@@ -6395,6 +6395,8 @@ footer {
   color: white;
   background: black;
   border: 1px solid white;
+  max-width: 30px;
+  max-height: 30px;
   text-align: center;
   padding: 10px; }
 
@@ -6413,10 +6415,6 @@ footer {
   align-items: center;
   width: 120px;
   margin: auto; }
-
-@media (max-width: 700px) {
-  td {
-    max-width: 30px; } }
 
 /*
 .game2 {

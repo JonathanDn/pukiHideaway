@@ -81,8 +81,11 @@ function ondrop(event, ui) {
 
 	if (gRemaining === 0) {
 		//show the continue button to next challanges
-		$('.nextChallangeContainer').show();
+//		$('.nextChallangeContainer').show();
 		//$('.nextChallangeContainer').dialog();
+		document.getElementById('light').style.display='block';
+		document.getElementById('fade').style.display='block';
+
 		
 		// save progress to local storage.
 		saveCurrChal(3);

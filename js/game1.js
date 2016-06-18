@@ -12,7 +12,7 @@ var quests = [
 			isCorrect : false
 		}, {
 			image : 'img/bunny.jpg',
-			answers : ['I am known showing up on Easter', 'I am known for showing up on Christmas', 'I am known for showing up on Hanukka'],
+			answers : ['I am known for showing up on Easter', 'I am known for showing up on Christmas', 'I am known for showing up on Hanukka'],
 			correctOptIndex : 0,
 			isCorrect : false
 		}, {
@@ -93,6 +93,8 @@ function game1Init() {
 	var elDifficulty = document.querySelector('.game1difficulty');
 	elDifficulty.textContent = DIFFICULTYTEXT[gDifficulty];
 	// render questions from MODEL to DOM
+	var elTotalQuestions = document.querySelector('.game1total-questions');
+	elTotalQuestions.textContent=quests[gDifficulty].length;
 	renderQuestion(gDifficulty, gCurrQuestion);
 }
 

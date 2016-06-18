@@ -38,7 +38,7 @@ footer {
 
 .difficulty {
   color: blue;
-  border: 1px solid black;
+  // border: 1px solid black;
   display:flex;
   flex-direction: row;
   justify-content: space-around;
@@ -60,15 +60,23 @@ footer {
   display:flex;
   flex-direction: row;
   justify-content: space-around;
+  height: 23vmin;
   .chal {
     border: 2px solid darkblue;
-    display: flex;
     color: white;
     background-color: blue;
     height: 5em;
     border-radius: 50%;
-    align-items: center;
+    height: 120px;
+    width: 120px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 60px;
   }
+
+
+
+
   .complete:before{
     @extend .glyphicon-ok:before, .my-glyphicon;
 	  color:greenyellow;
@@ -79,3 +87,5 @@ footer {
     color: black;
   }
 }
+
+

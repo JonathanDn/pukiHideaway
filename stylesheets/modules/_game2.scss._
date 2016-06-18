@@ -117,7 +117,7 @@
 
 
 // all devices vertical view working
-@media (max-width: 700px) {
+@media (max-width: 380px) {
     .game2 {
         flex-direction: column;
         justify-content: flex-start;

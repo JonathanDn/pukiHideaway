@@ -1,9 +1,23 @@
 'use strict';
-var AMOUNT = 3;
-var gRemaining = AMOUNT;
+var difficulties = [{
+		amount : 9,
+		max : 9
+	}, {
+		amount : 16,
+		max : 20
+	}, {
+		amount : 16,
+		max : 100
+	}
+]
+var gDifficulty;
+var gRemaining;
+var gAmount;
+var gMax;
 
 $(document).ready(function () {
 	//    verifyChalAccess(2);
+
 	renderBoard();
 	initDragAndDrop();
 });

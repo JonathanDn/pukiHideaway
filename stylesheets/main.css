@@ -6467,13 +6467,13 @@ footer {
     height: 40px;
     width: 150px; } }
 
-.sumBlocks {
+.game3 .sumBlocks {
   border: 1px solid black;
   display: flex;
   justify-content: space-around;
   width: 95%; }
 
-.sumBlocks .sumBlock {
+.game3 .sumBlocks .sumBlock {
   color: white;
   background: black;
   border: 1px solid white;
@@ -6483,12 +6483,12 @@ footer {
   text-align: center;
   position: relative; }
 
-.sumBlocks .sumBlock .sumBlockNum {
+.game3 .sumBlocks .sumBlock .sumBlockNum {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%); }
 
-.board-cell {
+.game3 .board-cell {
   color: white;
   background: silver;
   border: 1px solid white;
@@ -6497,20 +6497,28 @@ footer {
   text-align: center;
   padding: 10px; }
 
-.gameBoard {
+.game3 .gameBoard {
   display: flex;
   flex-wrap: wrap; }
 
-.boardContainer {
+.game3 .boardContainer {
   width: 100%;
   height: 65vmin; }
 
-.gameBoard {
+.game3 .gameBoard {
   width: 60vmin;
   height: 60vmin; }
 
-.infoContainer {
-  width: 100%; }
+.game3 .infoContainer2 {
+  border: 1px solid black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25vmin;
+  width: 100%;
+  padding-top: 30px;
+  position: relative; }
 
 .game4Header {
   background-image: url("../img/game4background.jpg");

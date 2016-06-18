@@ -107,10 +107,21 @@
 
 // should work for horizontal and vertical
 @media (orientation:landscape) {
+    .game3 {
+        display: flex;
+        flex-direction: row;
+    }
     .boardContainer3 {
        
     }
     .infoContainer3 {
-        
+        height: 76vmin;
+    }
+    .sumBlocks {
+        height: 70vmin;
+        .sumBlock {
+            height: 6vmin;
+            width: 6vmin;
+        }
     }
 }

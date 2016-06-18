@@ -47,7 +47,7 @@
         border: 1px solid black;
         display: flex;
         justify-content: center;
-        height: 133vmin;
+        height: 89vh;
         width: 100%;
         padding-bottom: 10px;
         padding-top: 20px;
@@ -82,7 +82,7 @@
 }
 
 // should work for horizontal and vertical
-@media (max-width: 380px) {
+@media (orientation:landscape) {
     .boardContainer3 {
         
     }

@@ -6177,7 +6177,6 @@ footer {
   width: 100%; }
 
 .header {
-  font-size: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around; }
@@ -6188,7 +6187,7 @@ footer {
       text-decoration: none; }
   .header .question1 {
     color: black;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     width: 10em;
     text-align: center;

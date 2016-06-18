@@ -34,12 +34,12 @@ var quests = [
 	],
 	[{
 		image: 'img/armadilo.jpg',
-		answers:['my special ability is sniffing around with his big nose','my special ability is rolling to a ball to defend from predators','my special ability is running very fast to catch it\'s prey','Having exceptional swimming skills'],
+		answers:['My special ability is sniffing around with his big nose','My special ability is rolling to a ball to defend from predators','My special ability is running very fast to catch it\'s prey','Having exceptional swimming skills'],
 		correctOptIndex: 1,
 		isCorrect : false
 	},{
 		image: 'img/orangutan.jpg',
-		answers:['they love dense forests with high trees','they love vast seas with many fish','they love endless desserts with scarce water'],
+		answers:['They love dense forests with high trees','They love vast seas with many fish','They love endless desserts with scarce water'],
 		correctOptIndex: 0,
 		isCorrect : false
 	},{
@@ -49,12 +49,12 @@ var quests = [
 		isCorrect : false
 	},{
 		image: 'img/rhyno.jpg',
-		answers:['sought after their thick skin','sought after the speed it can reach when running','sought after their horns made of ivory'],
+		answers:['Sought after their thick skin','Sought after the speed it can reach when running','Sought after their horns made of ivory'],
 		correctOptIndex: 2,
 		isCorrect : false
 	},{
 		image: 'img/chameleon.jpg',
-		answers:['Known mostly for climbing ability','Known mostly for independent  rotating eyes ability','Known mostly for excellent camouflage ability'],
+		answers:['Known mostly for climbing ability','Known mostly for independent rotating eyes ability','Known mostly for excellent camouflage ability'],
 		correctOptIndex: 2,
 		isCorrect : false
 	}

@@ -6149,13 +6149,13 @@ footer {
   .game3 {
     display: flex;
     flex-direction: row;
-    width: 110vmin; }
+    justify-content: space-between;
+    width: 150vmin; }
     .game3 .boardContainer3 {
-      height: 95vmin;
-      width: 100vmin; }
+      height: 100vmin;
+      width: 130vmin; }
     .game3 .infoContainer3 {
       height: 100vmin;
-      height: 95vmin;
       width: 25vmin; }
     .game3 .sumBlocks {
       height: 95vmin;

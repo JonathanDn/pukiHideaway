@@ -84,7 +84,7 @@ footer {
 
   .complete:before{
     @extend .glyphicon-ok:before, .my-glyphicon;
-	  color:greenyellow;
+	  color:#00FF00;
   }
   .locked:before{
   @extend .glyphicon-lock:before, .my-glyphicon;

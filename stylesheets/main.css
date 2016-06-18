@@ -6748,7 +6748,7 @@ footer {
   line-height: 60px; }
 
 .challanges .complete:before {
-  color: greenyellow; }
+  color: #00FF00; }
 
 .challanges .locked:before {
   font-size: 1.5em;

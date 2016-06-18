@@ -111,7 +111,18 @@ width:26.66vmin;
 height:26.66vmin;
 }
 
-
+.game3-easy{
+background-image:url('../img/monkeySelfie.jpg');
+background-size:cover;
+}
+.game3-medium{
+background-image:url('../img/monkeySelfie.jpg');
+background-size:cover;
+}
+.game3-hard{
+background-image:url('../img/monkeySelfie.jpg');
+background-size:cover;
+}
 
 // looking good both in horizontal and vertical
 @media (orientation:landscape) {

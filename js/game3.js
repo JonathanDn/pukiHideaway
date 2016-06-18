@@ -37,10 +37,11 @@ function renderBoard() {
 		boardHTML += '<div class="board-cell" data-drag-target-id="#drag-' + total + '">' + excersise + '</div>';
 	});
 	$board.html(boardHTML);
+	$board.addClass('game3-'+DIFFICULTYTEXT[gDifficulty]);
 	if (gMax === 9) {
 		$board.addClass('X3X3');
 	}
-
+	
 	var $sumBlocks = $('.sumBlocks');
 	var blocksHTML = '';
 

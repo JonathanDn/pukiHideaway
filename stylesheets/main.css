@@ -6148,6 +6148,18 @@ footer {
   width: 26.66vmin;
   height: 26.66vmin; }
 
+.game3-easy {
+  background-image: url("../img/monkeySelfie.jpg");
+  background-size: cover; }
+
+.game3-medium {
+  background-image: url("../img/monkeySelfie.jpg");
+  background-size: cover; }
+
+.game3-hard {
+  background-image: url("../img/monkeySelfie.jpg");
+  background-size: cover; }
+
 @media (orientation: landscape) {
   .game3 {
     display: flex;

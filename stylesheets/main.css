@@ -6471,8 +6471,8 @@ footer {
   border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  height: 18vmin;
+  justify-content: center;
+  height: 30vmin;
   width: 95%; }
 
 .game3 .sumBlocks .sumBlock {
@@ -6480,8 +6480,8 @@ footer {
   background: black;
   border: 1px solid white;
   outline: 1px solid black;
-  height: 6vmin;
-  width: 6vmin;
+  height: 10vmin;
+  width: 10vmin;
   margin: 0.5vmin;
   text-align: center;
   position: relative; }
@@ -6509,7 +6509,7 @@ footer {
 .game3 .boardContainer3 {
   display: flex;
   justify-content: center;
-  height: 84vmax;
+  height: 74vmax;
   width: 100%;
   padding-bottom: 10px;
   padding-top: 20px;
@@ -6529,7 +6529,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 20vmin;
+  height: 30vmin;
   width: 100%;
   padding-top: 5px;
   position: relative;

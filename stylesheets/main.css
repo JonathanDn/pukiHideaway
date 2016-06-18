@@ -6337,7 +6337,7 @@ footer {
 .boardContainer {
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 20px;
   border: 1px solid black;
   width: 75%;
   background: #207cca;
@@ -6377,13 +6377,16 @@ footer {
 
 .infoContainer .currDifficulty {
   margin-left: 3px;
-  font-family: verdana;
-  font-size: 14px; }
+  font-size: 14px;
+  font-family: 'Aclonica', serif;
+  text-shadow: -2px 2px 2px black; }
 
 .infoContainer .attemptsCount {
   margin: 5px;
   font-family: verdana;
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: 'Aclonica', serif;
+  text-shadow: -2px 2px 2px black; }
 
 .infoContainer .looseBlocks {
   display: flex;
@@ -6438,15 +6441,15 @@ footer {
   border-radius: 20%; }
 
 .nextChallangeContainer2 {
+  z-index: 1px;
+  position: absolute;
+  top: 45vh;
+  left: 25%;
   display: none;
   padding-bottom: 10px; }
 
 .nextChallangeContainer2 .nextChallange2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  margin: auto; }
+  width: 120px; }
 
 @media (max-width: 380px) {
   .game2 {

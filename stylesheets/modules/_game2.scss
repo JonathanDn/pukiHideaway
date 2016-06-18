@@ -10,7 +10,7 @@
 .boardContainer {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
     // background-image: url("../img/gradiantBlue.jpg");
     border: 1px solid black;
     width: 75%;
@@ -46,8 +46,9 @@
 
     .currDifficulty {
         margin-left: 3px;
-        font-family: verdana;
         font-size: 14px;
+        font-family: 'Aclonica', serif;
+        text-shadow: -2px 2px 2px black; 
     }
 
     .attemptsCount {
@@ -56,6 +57,8 @@
         margin: 5px;
         font-family: verdana;
         font-size: 16px;
+        font-family: 'Aclonica', serif;
+        text-shadow: -2px 2px 2px black;
     }
 
     .looseBlocks {
@@ -130,15 +133,19 @@
 
 // next chal button container and button - currently hidden from display
 .nextChallangeContainer2 {
+    z-index: 1px;
+    position: absolute;
+    top: 45vh;
+    left: 25%;
     display: none;
     padding-bottom: 10px;
     .nextChallange2 {
         // border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
         width: 120px;
-        margin: auto;
+        // margin: auto;
         
     }
 }

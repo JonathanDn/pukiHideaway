@@ -6494,8 +6494,7 @@ footer {
   border: 1px solid white;
   height: 20vmin;
   width: 20vmin;
-  text-align: center;
-  padding: 10px; }
+  text-align: center; }
 
 .game3 .gameBoard {
   display: flex;
@@ -6504,10 +6503,9 @@ footer {
   height: 80vmin; }
 
 .game3 .boardContainer3 {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
-  height: 133vmin;
+  height: 89vmax;
   width: 100%;
   padding-bottom: 10px;
   padding-top: 20px;
@@ -6523,7 +6521,6 @@ footer {
   /* IE6-9 fallback on horizontal gradient */ }
 
 .game3 .infoContainer3 {
-  border: 1px solid black;
   color: white;
   display: flex;
   flex-direction: column;
@@ -6542,6 +6539,17 @@ footer {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
+
+.nextChallangeContainer3 {
+  z-index: 1px;
+  position: absolute;
+  top: 45vh;
+  left: 25%;
+  display: none;
+  padding-bottom: 10px; }
+
+.nextChallangeContainer3 .nextChallange3 {
+  width: 120px; }
 
 .game4Header {
   background-image: url("../img/game4background.jpg");

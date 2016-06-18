@@ -33,7 +33,7 @@
         height: 20vmin;
         width: 20vmin;
         text-align: center;
-        padding: 10px;
+        // padding: 10px;
     }
     .gameBoard	{
         display: flex;
@@ -44,10 +44,10 @@
 
 
     .boardContainer3 {
-        border: 1px solid black;
+        // border: 1px solid black;
         display: flex;
         justify-content: center;
-        height: 133vmin;
+        height: 89vmax;
         width: 100%;
         padding-bottom: 10px;
         padding-top: 20px;
@@ -61,7 +61,7 @@
 
 
     .infoContainer3 {
-        border: 1px solid black;
+        // border: 1px solid black;
         color: white;
         display: flex;
         flex-direction: column;
@@ -81,10 +81,31 @@
 
 }
 
+.nextChallangeContainer3 {
+    z-index: 1px;
+    position: absolute;
+    top: 45vh;
+    left: 25%;
+    display: none;
+    padding-bottom: 10px;
+    .nextChallange3 {
+        // border: 1px solid black;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        width: 120px;
+        // margin: auto;
+        
+    }
+}
+
+
+
+
 // should work for horizontal and vertical
 @media (max-width: 380px) {
     .boardContainer3 {
-        
+       
     }
     .infoContainer3 {
         

@@ -6359,6 +6359,7 @@ footer {
   font-size: 16px; }
 
 .infoContainer .currDifficulty {
+  margin-left: 5px;
   font-family: verdana;
   font-size: 18px; }
 

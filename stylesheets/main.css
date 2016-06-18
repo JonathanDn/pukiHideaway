@@ -6101,7 +6101,7 @@ footer {
   .game3 .boardContainer3 {
     display: flex;
     justify-content: center;
-    height: 76vmax;
+    height: 76vh;
     width: 100%;
     padding-bottom: 10px;
     padding-top: 20px;
@@ -6149,8 +6149,14 @@ footer {
   .game3 {
     display: flex;
     flex-direction: row; }
+    .game3 .boardContainer3 {
+      height: 95vmin; }
     .game3 .infoContainer3 {
+<<<<<<< HEAD
       height: 100vmin;
+=======
+      height: 95vmin;
+>>>>>>> 89e3bdc53543dfca38fb2b975ea7172da4178997
       width: 25vmin; }
     .game3 .sumBlocks {
       height: 95vmin;

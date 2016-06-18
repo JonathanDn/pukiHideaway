@@ -21,7 +21,6 @@ $(document).ready(function () {
 	gAmount = DIFFICULTIES[gDifficulty].amount;
 	gRemaining = gAmount;
 	gMax = DIFFICULTIES[gDifficulty].max;
-
 	renderBoard();
 	initDragAndDrop();
 });
@@ -30,22 +29,28 @@ function renderBoard() {
 	var $board = $('.gameBoard');
 	var draggableBlocks = getArrayOfRandomUniqueNums(gAmount, 1, gMax);
 	var boardHTML = '';
-	draggableBlocks.forEach(function(total){
-		var a=randomInt(gMax);
-		var b=total-a;
-		var excersise=''+ ((b>0)? (a+'+'+b) : (a+'-'+(-b)));
+	draggableBlocks.forEach(function (total) {
+		var a = randomInt(gMax);
+		var b = total - a;
+		var excersise = '' + ((b > 0) ? (a + '+' + b) : (a + '-' + (-b)));
 		//console.log(total,'=',excersise,'b>0',b>0);
-		boardHTML+='<div class="board-cell" data-drag-target-id="#drag-' + total + '">' + excersise + '</div>';
+		boardHTML += '<div class="board-cell" data-drag-target-id="#drag-' + total + '">' + excersise + '</div>';
 	});
 	$board.html(boardHTML);
+	if (gMax === 9) {
+		$board.addClass('X3X3');
+	}
+
 	var $sumBlocks = $('.sumBlocks');
 	var blocksHTML = '';
 
-	draggableBlocks.sort(function(a, b){return a-b});
+	draggableBlocks.sort(function (a, b) {
+		return a - b
+	});
 	draggableBlocks.forEach(function (blockValue) {
 		blocksHTML += '<div class="sumBlock" id="drag-' + blockValue + '"><span class="sumBlockNum">' + blockValue + '</span></div>';
 	});
-$sumBlocks.html(blocksHTML);
+	$sumBlocks.html(blocksHTML);
 }
 
 function initDragAndDrop() {

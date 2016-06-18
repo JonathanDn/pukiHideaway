@@ -6144,6 +6144,10 @@ footer {
   .nextChallangeContainer3 .nextChallange3 {
     width: 120px; }
 
+.X3X3 .board-cell {
+  width: 26.66vmin;
+  height: 26.66vmin; }
+
 @media (orientation: landscape) {
   .game3 {
     display: flex;

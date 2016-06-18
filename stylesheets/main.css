@@ -6262,8 +6262,7 @@ footer {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  height: 100px; }
+  margin: auto; }
 
 .answerOptionsItem3 .answerBar {
   margin: 0.5em; }

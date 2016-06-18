@@ -6697,12 +6697,13 @@ footer {
 .white_content {
   display: none;
   position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
+  top: 35%;
+  left: 35%;
+  width: 210px;
+  height: 100px;
   padding: 16px;
   border: 16px solid orange;
+  border-radius: 7px;
   background-color: white;
   z-index: 1002;
   overflow: auto; }

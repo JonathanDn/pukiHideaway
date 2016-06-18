@@ -6150,11 +6150,11 @@ footer {
   background-size: cover; }
 
 .game3-medium {
-  background-image: url("../img/monkeySelfie.jpg");
+  background-image: url("../img/fullBannanaMonkey.jpg");
   background-size: cover; }
 
 .game3-hard {
-  background-image: url("../img/monkeySelfie.jpg");
+  background-image: url("../img/bannanamonkey.jpg");
   background-size: cover; }
 
 @media (orientation: landscape) {

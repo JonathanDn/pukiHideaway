@@ -6150,7 +6150,7 @@ footer {
     display: flex;
     flex-direction: row; }
     .game3 .infoContainer3 {
-      height: 150vmin;
+      height: 100vmin;
       width: 25vmin; }
     .game3 .sumBlocks {
       height: 95vmin;

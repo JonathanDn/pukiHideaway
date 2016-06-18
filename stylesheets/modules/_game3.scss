@@ -1,17 +1,20 @@
 .game3 {
 
     .sumBlocks {
-        // border: 1px solid black;
+        border: 1px solid black;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
+        height: 18vmin;
         width: 95%;
         .sumBlock {
             color: white;
             background: black;
             border: 1px solid white;
             outline: 1px solid black;
-            height: 5vmin;
-            width: 5vmin;
+            height: 6vmin;
+            width: 6vmin;
+            margin: 0.5vmin;
             text-align: center;
             position: relative;
             .sumBlockNum {
@@ -47,7 +50,7 @@
         // border: 1px solid black;
         display: flex;
         justify-content: center;
-        height: 89vmax;
+        height: 84vmax;
         width: 100%;
         padding-bottom: 10px;
         padding-top: 20px;
@@ -66,7 +69,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 11vmin;
+        height: 20vmin;
         width: 100%;
         padding-top: 5px;
         position: relative;

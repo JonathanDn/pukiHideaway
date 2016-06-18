@@ -28,6 +28,7 @@ $(document).ready(function () {
 
 function renderBoard() {
 	var $board = $('.gameBoard');
+	var draggableBlocks = getArrayOfRandomUniqueNums(gAmount, 1, gMax);
 	var boardItems = [];
 	for (var i = 1; i <= gAmount; i++) {
 		//get the first number for the addition
@@ -43,10 +44,10 @@ function renderBoard() {
 	$board.html(boardItems.join(''));
 	var $sumBlocks = $('.sumBlocks');
 	var blocksHTML = '';
-	var draggableBlocks = getArrayOfRandomUniqueNums(gAmount, 1, gMax);
+
 	draggableBlocks.sort(function(a, b){return a-b});
 	draggableBlocks.forEach(function (blockValue) {
-		blocksHTML += '<div class="sumBlock" id="drag-' + blockValue + '">' + blockValue + '</div>';
+		blocksHTML += '<div class="sumBlock" id="drag-' + blockValue + '"><span class="sumBlockNum">' + blockValue + '</span></div>';
 	});
 
 

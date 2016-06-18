@@ -7,7 +7,7 @@ var DIFFICULTIES = [{
 		max : 20
 	}, {
 		amount : 16,
-		max : 100
+		max : 99
 	}
 ]
 var gDifficulty;
@@ -29,19 +29,15 @@ $(document).ready(function () {
 function renderBoard() {
 	var $board = $('.gameBoard');
 	var draggableBlocks = getArrayOfRandomUniqueNums(gAmount, 1, gMax);
-	var boardItems = [];
-	for (var i = 1; i <= gAmount; i++) {
-		//get the first number for the addition
-		var randomNumber = parseInt(Math.random() * i);
-		//try not to have 0, but don't eliminate it completely
-		if (randomNumber === 0) {
-			randomNumber = parseInt(Math.random() * i);
-		}
-		//put each question (excersise) in random order
-		boardItems.splice(parseInt(Math.random() * i), 0,
-			'<div class="board-cell" data-drag-target-id="#drag-' + i + '">' + randomNumber + '+' + (i - randomNumber) + '</div>');
-	}
-	$board.html(boardItems.join(''));
+	var boardHTML = '';
+	draggableBlocks.forEach(function(total){
+		var a=randomInt(gMax);
+		var b=total-a;
+		var excersise=''+ ((b>0)? (a+'+'+b) : (a+'-'+(-b)));
+		//console.log(total,'=',excersise,'b>0',b>0);
+		boardHTML+='<div class="board-cell" data-drag-target-id="#drag-' + total + '">' + excersise + '</div>';
+	});
+	$board.html(boardHTML);
 	var $sumBlocks = $('.sumBlocks');
 	var blocksHTML = '';
 
@@ -49,9 +45,6 @@ function renderBoard() {
 	draggableBlocks.forEach(function (blockValue) {
 		blocksHTML += '<div class="sumBlock" id="drag-' + blockValue + '"><span class="sumBlockNum">' + blockValue + '</span></div>';
 	});
-
-
-
 $sumBlocks.html(blocksHTML);
 }
 

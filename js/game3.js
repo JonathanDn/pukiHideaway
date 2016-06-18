@@ -1,5 +1,5 @@
 'use strict';
-var difficulties = [{
+var DIFFICULTIES = [{
 		amount : 9,
 		max : 9
 	}, {
@@ -16,7 +16,10 @@ var gAmount;
 var gMax;
 
 $(document).ready(function () {
-	//    verifyChalAccess(2);
+	verifyChalAccess(2);
+	gDifficulty = loadGameDifficulty();
+	gAmount=DIFFICULTIES[gDifficulty].amount;
+	gMax=DIFFICULTIES[gDifficulty].max;
 
 	renderBoard();
 	initDragAndDrop();
@@ -25,7 +28,7 @@ $(document).ready(function () {
 function renderBoard() {
 	var $board = $('.gameBoard');
 	var boardItems = [];
-	for (var i = 1; i <= AMOUNT; i++) {
+	for (var i = 1; i <= gAmount; i++) {
 		//get the first number for the addition
 		var randomNumber = parseInt(Math.random() * i);
 		//try not to have 0, but don't eliminate it completely
@@ -39,7 +42,7 @@ function renderBoard() {
 	$board.html(boardItems.join(''));
 	var $sumBlocks = $('.sumBlocks');
 	var blocksHTML = '';
-	for (var i = 1; i <= AMOUNT; i++) {
+	for (var i = 1; i <= gAmount; i++) {
 		blocksHTML += '<div class="sumBlock" id="drag-' + i + '">' + i + '</div>';
 	}
 	$sumBlocks.html(blocksHTML);
@@ -75,5 +78,17 @@ function ondrop(event, ui) {
 		$('.nextChallangeContainer').show();
 		// save progress to local storage.
 		saveCurrChal(3);
+	}
+}
+
+//min is inclusive,max is exclusive
+function getArrayOfRandomUniqueNums(length,min,max){
+	var ar=[parseInt(Math.random()*max)+min]
+	var coung=1;
+	while(count<length){
+		var rand=parseInt(Math.random()*max)+min;
+		if (!ar.includes(rand){
+			ar.push(rand);
+		}
 	}
 }

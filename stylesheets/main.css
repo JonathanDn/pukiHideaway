@@ -6149,13 +6149,15 @@ footer {
   .game3 {
     display: flex;
     flex-direction: row; }
-  .infoContainer3 {
-    height: 76vmin; }
-  .sumBlocks {
-    height: 70vmin; }
-    .sumBlocks .sumBlock {
-      height: 6vmin;
-      width: 6vmin; } }
+    .game3 .infoContainer3 {
+      height: 150vmin;
+      width: 25vmin; }
+    .game3 .sumBlocks {
+      height: 95vmin;
+      width: 30vmin; }
+      .game3 .sumBlocks .sumBlock {
+        height: 9vmin;
+        width: 9vmin; } }
 
 .game4Header {
   background-image: url("../img/game4background.jpg");

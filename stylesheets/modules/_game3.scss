@@ -110,18 +110,21 @@
     .game3 {
         display: flex;
         flex-direction: row;
-    }
-    .boardContainer3 {
-       
-    }
-    .infoContainer3 {
-        height: 76vmin;
-    }
-    .sumBlocks {
-        height: 70vmin;
-        .sumBlock {
-            height: 6vmin;
-            width: 6vmin;
+        .boardContainer3 {
+            
+        
         }
+        .infoContainer3 {
+            height: 150vmin;
+            width: 25vmin;
+        }
+            .sumBlocks {
+                height: 95vmin;
+                width: 30vmin;
+                .sumBlock {
+                    height: 9vmin;
+                    width: 9vmin;
+                }
+            }
     }
 }

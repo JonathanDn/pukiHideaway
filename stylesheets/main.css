@@ -6359,20 +6359,31 @@ footer {
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
-  background-image: url("../img/gradiantBlue2.jpg");
   border: 1px solid black;
   position: relative;
-  width: 25%; }
-
-.infoContainer .attemptsCount {
-  margin: 5px;
-  font-family: verdana;
-  font-size: 16px; }
+  width: 25%;
+  background: #d8e0de;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
 
 .infoContainer .currDifficulty {
   margin-left: 3px;
   font-family: verdana;
   font-size: 14px; }
+
+.infoContainer .attemptsCount {
+  margin: 5px;
+  font-family: verdana;
+  font-size: 16px; }
 
 .infoContainer .looseBlocks {
   display: flex;

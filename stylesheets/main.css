@@ -6148,15 +6148,14 @@ footer {
 @media (orientation: landscape) {
   .game3 {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    width: 110vmin; }
     .game3 .boardContainer3 {
-      height: 95vmin; }
-    .game3 .infoContainer3 {
-<<<<<<< HEAD
-      height: 100vmin;
-=======
       height: 95vmin;
->>>>>>> 89e3bdc53543dfca38fb2b975ea7172da4178997
+      width: 100vmin; }
+    .game3 .infoContainer3 {
+      height: 100vmin;
+      height: 95vmin;
       width: 25vmin; }
     .game3 .sumBlocks {
       height: 95vmin;

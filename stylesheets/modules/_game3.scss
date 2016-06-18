@@ -1,12 +1,7 @@
-.bodyGame3 {
-    
-}
 
 .game3 {
     font-size: 5vmin;
-
     .sumBlocks {
-        // border: 1px solid black;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -29,10 +24,6 @@
             }
         }
     }
-
-
-
-
     .board-cell {
         color: white;
         background: silver;
@@ -40,7 +31,6 @@
         height: 20vmin;
         width: 20vmin;
         text-align: center;
-        // padding: 10px;
     }
     .gameBoard	{
         display: flex;
@@ -48,10 +38,7 @@
         width: 80vmin;
         height: 80vmin;
     }
-
-
     .boardContainer3 {
-        // border: 1px solid black;
         display: flex;
         justify-content: center;
         height: 76vh;
@@ -59,16 +46,13 @@
         padding-bottom: 10px;
         padding-top: 20px;
         // gradiant background
-        background: #cb60b3; /* Old browsers */
+        background: #cb60b3; 
         background: -moz-linear-gradient(-45deg,  #cb60b3 0%, #ad1283 20%, #cb60b3 36%, #cb60b3 36%, #ad1283 50%, #cb60b3 64%, #ad1283 79%, #cb60b3 94%, #de47ac 100%); /* FF3.6-15 */
         background: -webkit-linear-gradient(-45deg,  #cb60b3 0%,#ad1283 20%,#cb60b3 36%,#cb60b3 36%,#ad1283 50%,#cb60b3 64%,#ad1283 79%,#cb60b3 94%,#de47ac 100%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(135deg,  #cb60b3 0%,#ad1283 20%,#cb60b3 36%,#cb60b3 36%,#ad1283 50%,#cb60b3 64%,#ad1283 79%,#cb60b3 94%,#de47ac 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#de47ac',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     } 
-
-
     .infoContainer3 {
-        // border: 1px solid black;
         color: white;
         display: flex;
         flex-direction: column;
@@ -77,15 +61,13 @@
         width: 100%;
         padding-top: 5px;
         position: relative;
-        // gradiant diagonal
-        background: #d8e0de; /* Old browsers */
+        // gradiant diagonal background
+        background: #d8e0de; 
         background: -moz-linear-gradient(-45deg,  #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%); /* FF3.6-15 */
         background: -webkit-linear-gradient(-45deg,  #d8e0de 0%,#aebfbc 1%,#aebfbc 1%,#829d98 19%,#829d98 19%,#829d98 22%,#99afab 32%,#99afab 32%,#8ea6a2 36%,#aebfbc 54%,#829d98 58%,#4e5c5a 75%,#4e5c5a 85%,#0e0e0e 98%,#0e0e0e 98%,#0e0e0e 99%); /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(135deg,  #d8e0de 0%,#aebfbc 1%,#aebfbc 1%,#829d98 19%,#829d98 19%,#829d98 22%,#99afab 32%,#99afab 32%,#8ea6a2 36%,#aebfbc 54%,#829d98 58%,#4e5c5a 75%,#4e5c5a 85%,#0e0e0e 98%,#0e0e0e 98%,#0e0e0e 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
     }
-
 }
 
 .nextChallangeContainer3 {
@@ -96,13 +78,7 @@
     display: none;
     padding-bottom: 10px;
     .nextChallange3 {
-        // border: 1px solid black;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        width: 120px;
-        // margin: auto;
-        
+        width: 120px;    
     }
 }
 
@@ -124,7 +100,7 @@ background-image:url('../img/bannanamonkey.jpg');
 background-size:cover;
 }
 
-// looking good both in horizontal and vertical
+// horizontal and vertical
 @media (orientation:landscape) {
     .game3 {
         display: flex;
@@ -134,7 +110,6 @@ background-size:cover;
         .boardContainer3 {
             height: 98vmin;
             width: 86vw;
-        
         }
         .infoContainer3 {
             height: 98vmin;

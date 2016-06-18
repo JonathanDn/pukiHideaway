@@ -4,24 +4,21 @@
     display:flex;  
     justify-content: center;
     height: 100vh;
-    
 }
 
 .boardContainer {
     display: flex;
     justify-content: center;
     padding-top: 20px;
-    // background-image: url("../img/gradiantBlue.jpg");
     border: 1px solid black;
     width: 75%;
     // background gradiant:
-    background: #207cca; /* Old browsers */
+    background: #207cca; 
     background: -moz-linear-gradient(top,  #207cca 3%, #207cca 3%, #207cca 3%, #207cca 9%, #207cca 11%, #207cca 11%, #207cca 12%, #207cca 18%, #2989d8 35%, #7db9e8 77%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  #207cca 3%,#207cca 3%,#207cca 3%,#207cca 9%,#207cca 11%,#207cca 11%,#207cca 12%,#207cca 18%,#2989d8 35%,#7db9e8 77%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  #207cca 3%,#207cca 3%,#207cca 3%,#207cca 9%,#207cca 11%,#207cca 11%,#207cca 12%,#207cca 18%,#2989d8 35%,#7db9e8 77%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207cca', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
-
 }
 
 
@@ -31,52 +28,41 @@
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
-    // background: blue;
-    // background-image: url("../img/gradiantBlue2.jpg");
     border: 1px solid black;
     position: relative;
     width: 25%;
     // gradiant diagonal
-    background: #d8e0de; /* Old browsers */
+    background: #d8e0de; 
     background: -moz-linear-gradient(-45deg,  #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg,  #d8e0de 0%,#aebfbc 1%,#aebfbc 1%,#829d98 19%,#829d98 19%,#829d98 22%,#99afab 32%,#99afab 32%,#8ea6a2 36%,#aebfbc 54%,#829d98 58%,#4e5c5a 75%,#4e5c5a 85%,#0e0e0e 98%,#0e0e0e 98%,#0e0e0e 99%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg,  #d8e0de 0%,#aebfbc 1%,#aebfbc 1%,#829d98 19%,#829d98 19%,#829d98 22%,#99afab 32%,#99afab 32%,#8ea6a2 36%,#aebfbc 54%,#829d98 58%,#4e5c5a 75%,#4e5c5a 85%,#0e0e0e 98%,#0e0e0e 98%,#0e0e0e 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
     .currDifficulty {
         margin-left: 3px;
         font-size: 14px;
         font-family: 'Aclonica', serif;
         text-shadow: -2px 2px 2px black; 
     }
-
     .attemptsCount {
-        // currently to display loosblocks child centered in the colum
-        // untill I learn how to do it on % and not pixels
         margin: 5px;
         font-family: verdana;
         font-size: 16px;
         font-family: 'Aclonica', serif;
         text-shadow: -2px 2px 2px black;
     }
-
     .looseBlocks {
-        // border: 1px solid black;
         display: flex;
         flex-direction: column; 
         justify-content: space-around;
         height: 35vh;
     }
-    
 }
 
-// LEFT BLOCK
 .leftBlock {
     color: white;
     background: black;
     border: 1px solid white;
-    // outline: 1px solid black;
     position: relative;
     height: 32px;
     width: 36px;
@@ -89,7 +75,6 @@
     }
 }
 
-// RIGHT BLOCK
 .rightBlock {
     
     color: white;
@@ -116,7 +101,6 @@
     text-align: center;
     padding: 10px;
     border-radius: 20%;
-
     .rightBlockNum {
         // center on x / y axises --> anchor the text
         position: absolute;
@@ -130,8 +114,6 @@
     border-radius: 20%;
 }
 
-
-// next chal button container and button - currently hidden from display
 .nextChallangeContainer2 {
     z-index: 1px;
     position: absolute;
@@ -140,13 +122,7 @@
     display: none;
     padding-bottom: 10px;
     .nextChallange2 {
-        // border: 1px solid black;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         width: 120px;
-        // margin: auto;
-        
     }
 }
 
@@ -161,17 +137,14 @@
         width: 100%;
         height: 80%;
     }
-
     .infoContainer {
         width: 100%;
         height: 20%;
         padding-top: 2px;
-        
         .looseBlocks {
             flex-direction: row;
             height: 40px;
             width: 150px;
-
         }
     }
 }

@@ -12,8 +12,6 @@
 
 
 header {
-  // display:flex;
-  // flex-flow: row wrap;
   background-color: indigo;
   padding:10px;
   h1 {
@@ -46,7 +44,6 @@ footer {
   justify-content: space-around;
 }
 .my-glyphicon{
-	  //top: 1px;
   display: inline-block;
   font-family: 'Glyphicons Halflings';
   font-style: normal;
@@ -81,5 +78,4 @@ footer {
     font-size: 1.5em;
     color: black;
   }
- 
 }

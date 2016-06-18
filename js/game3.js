@@ -33,7 +33,7 @@ function renderBoard() {
 		var a = randomInt(gMax);
 		var b = total - a;
 		var excersise = '' + ((b > 0) ? (a + '+' + b) : (a + '-' + (-b)));
-		//console.log(total,'=',excersise,'b>0',b>0);
+		// console.log(total,'=',excersise,'b>0',b>0);
 		boardHTML += '<div class="board-cell" data-drag-target-id="#drag-' + total + '">' + excersise + '</div>';
 	});
 	$board.html(boardHTML);
@@ -59,7 +59,6 @@ function initDragAndDrop() {
 	$('.board-cell').each(function () {
 		//console.log($(this));
 		//console.log($(this).data('drag-target-id'));
-
 		$(this).droppable({
 			accept : $(this).data('drag-target-id'),
 			drop : ondrop,
@@ -75,24 +74,22 @@ function ondrop(event, ui) {
 	//console.table(event);
 
 	//somehow this event is fired twice every correct drop
-	//this is a workaround
 	gRemaining -= 0.5;
 	//console.log(gRemaining);
 
 	if (gRemaining === 0) {
-		//show the continue button to next challanges
+		// show the continue button to next challanges
 //		$('.nextChallangeContainer').show();
 		//$('.nextChallangeContainer').dialog();
 		document.getElementById('light').style.display='block';
 		document.getElementById('fade').style.display='block';
 
-		
 		// save progress to local storage.
 		saveCurrChal(3);
 	}
 }
 
-//min is inclusive,max is exclusive
+// min is inclusive,max is exclusive
 function getArrayOfRandomUniqueNums(length, min, max) {
 	var ar = [parseInt(Math.random() * max) + min];
 	while (ar.length < length) {

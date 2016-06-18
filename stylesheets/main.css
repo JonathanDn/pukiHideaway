@@ -5851,15 +5851,13 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   margin: 5px; }
-
-.teddyItem1 {
-  width: 45%;
-  height: 50%; }
-
-.bearItem2 {
-  width: 45%;
-  height: 50%;
-  border-radius: 50%; }
+  .bearContainer .teddyItem1 {
+    width: 45%;
+    height: 50%; }
+  .bearContainer .bearItem2 {
+    width: 45%;
+    height: 50%;
+    border-radius: 50%; }
 
 .answerOptionsItem3 {
   display: flex;
@@ -5941,7 +5939,6 @@ footer {
   border: 1px solid black;
   width: 75%;
   background: #207cca;
-  /* Old browsers */
   background: -moz-linear-gradient(top, #207cca 3%, #207cca 3%, #207cca 3%, #207cca 9%, #207cca 11%, #207cca 11%, #207cca 12%, #207cca 18%, #2989d8 35%, #7db9e8 77%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #207cca 3%, #207cca 3%, #207cca 3%, #207cca 9%, #207cca 11%, #207cca 11%, #207cca 12%, #207cca 18%, #2989d8 35%, #7db9e8 77%);
@@ -5963,7 +5960,6 @@ footer {
   position: relative;
   width: 25%;
   background: #d8e0de;
-  /* Old browsers */
   background: -moz-linear-gradient(-45deg, #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%);
@@ -6102,7 +6098,6 @@ footer {
     padding-bottom: 10px;
     padding-top: 20px;
     background: #cb60b3;
-    /* Old browsers */
     background: -moz-linear-gradient(-45deg, #cb60b3 0%, #ad1283 20%, #cb60b3 36%, #cb60b3 36%, #ad1283 50%, #cb60b3 64%, #ad1283 79%, #cb60b3 94%, #de47ac 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #cb60b3 0%, #ad1283 20%, #cb60b3 36%, #cb60b3 36%, #ad1283 50%, #cb60b3 64%, #ad1283 79%, #cb60b3 94%, #de47ac 100%);
@@ -6121,7 +6116,6 @@ footer {
     padding-top: 5px;
     position: relative;
     background: #d8e0de;
-    /* Old browsers */
     background: -moz-linear-gradient(-45deg, #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%);
@@ -6201,7 +6195,6 @@ footer {
     margin-top: 0.3em; }
 
 .animalWrap {
-  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -6223,7 +6216,6 @@ footer {
     align-self: flex-end; }
 
 .howMany {
-  border: 1px solid black;
   display: flex;
   justify-content: space-around;
   width: 80%;

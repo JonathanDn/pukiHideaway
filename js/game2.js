@@ -29,7 +29,6 @@ $(document).ready(function () {
 	NUMS=DIFFICULTIES[difficulty];
 	var elDifficulty=document.querySelector('.currDifficulty');
 	elDifficulty.textContent+=DIFFICULTYTEXT[difficulty];
-
 	renderBoard(0);
 });
 
@@ -139,8 +138,7 @@ function renderBoard(row) {
 
 }
 
-// DRAK & DROP:
-
+// DRAG & DROP:
 function ondrop(event, ui) {
 	//this event double-fires alot, make sure it didn't happen this time
 	if (ui.draggable.css('visibility') === 'hidden') {

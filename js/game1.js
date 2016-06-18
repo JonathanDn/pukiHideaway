@@ -115,7 +115,7 @@ function renderQuestion(difficulty, questionNumber) {
 		}
 	}
 
-	//do the rendering
+	// do the rendering
 	answerNumbers.forEach(function (answerNum, i) {
 		elsAnswers[i].textContent = currQuest.answers[answerNum];
 		elsAnswers[i].setAttribute('data-answer-num', answerNum);
@@ -134,7 +134,6 @@ function answerClicked(elAnswer) {
 			var elNextChal = document.querySelector('.nextChallangeContainer');
 			// console.log('elNextChal: ', elNextChal);
 			elNextChal.style.display = "block";
-
 			// showing the next challange button
 			saveCurrChal(1);
 

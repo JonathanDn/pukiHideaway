@@ -46,9 +46,7 @@ function verifyChalAccess(chal) {
 	//	console.log('chal:',chal,'currChal:',currChal,'currChal<chal:',currChal<chal)
 	if (currChal < chal) {
 		window.location = 'index.html';
-		//		return ('acting');
 	}
-	//	return ('access granted');
 }
 
 function randomInt(max){

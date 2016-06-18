@@ -5,67 +5,51 @@
 }
 
 .game1Header {
-    // border: 1px solid black;
     .headerText {
         display: flex;
         justify-content: center;
         color: white;
     }
 }
-// Parent container
+
 .game1 {
-    // border: 1px solid black;
     display: flex;
     flex-direction: column;
 }
-// bear container within parent
+
 .bearContainer {
-    // border: 1px solid black;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 5px;
-
+    .teddyItem1 {
+        width: 45%;
+        height: 50%;
+    }
+    .bearItem2 {
+        width: 45%;
+        height: 50%;
+        border-radius: 50%;
+    }
 }
 
-// bear child1
-.teddyItem1 {
-    width: 45%;
-    height: 50%;
-}
-
-// bear child2
-.bearItem2 {
-    width: 45%;
-    height: 50%;
-    border-radius: 50%;
-}
-
-// child3 CONTAINER of answeres
 .answerOptionsItem3 {
-    // border: 1px solid black;
     display:flex;
     flex-direction: column;
-    // justify-content: space-around;
     margin: auto;
     .answerBar {
         margin: 0.5em;
     }
 }
 
-
-
-// next chal button container and button - currently hidden from display
 .nextChallangeContainer {
     display: none;
     .nextChallange {
-        // border: 1px solid black;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 120px;
         margin: auto;
-        
     }
 }
 
@@ -80,7 +64,6 @@
     .bearContainer {
         padding-top: 40px;
         padding-bottom: 30px;
-        
     }
     .answerOptionsItem3 {
         max-width: 380px;
@@ -93,11 +76,8 @@
     }
 }
 
-
 // modiciation for iphone 6 n 4 vertical n horizontal
 @media (max-width: 400px) and (max-height: 700px) {
-
-
     .bearContainer {
         padding-top: 60px;
         padding-bottom: 40px;
@@ -105,12 +85,10 @@
         .teddyItem1 {
             max-width: 120px;
         }
-
         .changingImg {
             max-width: 120px;
         }
     }
-
     .game1 {
         height: 80vh;
     }
@@ -132,8 +110,6 @@
     .game1 {
         height: 80vh;
     }
-
-    // change bear image porportions:
     .teddyItem1 {
         max-width: 110px;
     }
@@ -152,7 +128,6 @@
 
 // iPhone 4 horizontal less then 320px
 @media (max-height: 340px) {
-    // change bear image porportions:
     .teddyItem1 {
         max-width: 90px;
     }

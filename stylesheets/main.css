@@ -6467,6 +6467,9 @@ footer {
     height: 40px;
     width: 150px; } }
 
+.game3 {
+  font-size: 6vmin; }
+
 .game3 .sumBlocks {
   border: 1px solid black;
   display: flex;
@@ -6487,7 +6490,6 @@ footer {
   position: relative; }
 
 .game3 .sumBlocks .sumBlock .sumBlockNum {
-  font-size: 6vmin;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%); }

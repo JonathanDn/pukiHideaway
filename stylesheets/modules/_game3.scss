@@ -4,16 +4,16 @@
         border: 1px solid black;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-        height: 18vmin;
-        width: 95%;
+        justify-content: center;
+        height: 30vmin;
+        width: 100%;
         .sumBlock {
             color: white;
             background: black;
             border: 1px solid white;
             outline: 1px solid black;
-            height: 6vmin;
-            width: 6vmin;
+            height: 11vmin;
+            width: 11vmin;
             margin: 0.5vmin;
             text-align: center;
             position: relative;
@@ -50,7 +50,7 @@
         // border: 1px solid black;
         display: flex;
         justify-content: center;
-        height: 84vmax;
+        height: 74vmax;
         width: 100%;
         padding-bottom: 10px;
         padding-top: 20px;
@@ -69,7 +69,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 20vmin;
+        height: 30vmin;
         width: 100%;
         padding-top: 5px;
         position: relative;

@@ -14,13 +14,13 @@
 }
 // Parent container
 .game1 {
-    border: 1px solid black;
+    // border: 1px solid black;
     display: flex;
     flex-direction: column;
 }
 // bear container within parent
 .bearContainer {
-    border: 1px solid black;
+    // border: 1px solid black;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -43,7 +43,7 @@
 
 // child3 CONTAINER of answeres
 .answerOptionsItem3 {
-    border: 1px solid black;
+    // border: 1px solid black;
     display:flex;
     flex-direction: column;
     // justify-content: space-around;

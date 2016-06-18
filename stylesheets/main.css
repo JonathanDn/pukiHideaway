@@ -5843,12 +5843,10 @@ footer {
   color: white; }
 
 .game1 {
-  border: 1px solid black;
   display: flex;
   flex-direction: column; }
 
 .bearContainer {
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -5864,7 +5862,6 @@ footer {
   border-radius: 50%; }
 
 .answerOptionsItem3 {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   margin: auto; }

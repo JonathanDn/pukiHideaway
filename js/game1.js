@@ -6,38 +6,60 @@ var ANSWERS_AMOUNT = 2;
 // quests model
 var quests = [
 	[{
-			id : 1,
 			image : 'img/polarBear.jpg',
 			answers : ['That is a Grizzly Bear', 'That is a Polar Bear', 'That is a Panda Bear', 'that is a typical Brown Bear'], 
 			correctOptIndex : 1,
 			isCorrect : false
 		}, {
-			id : 2,
 			image : 'img/cow.jpg',
 			answers : ['This cat brings milk', 'This dog brings milk', 'This cow brings milk', 'This cow brings fish'], 
 			correctOptIndex : 2,
 			isCorrect : false
 		}, {
-			id : 3,
 			image : 'img/elephant.jpg',
 			answers : ['The dog is a the biggest mammal on ground', 'The aligator is the biggest mammal on ground', 'The whale is the biggest mammal on ground', 'The elephant is the biggest mammal on ground'], 
 			correctOptIndex : 3,
 			isCorrect : false
 		}, {
-			id : 4,
 			image : 'img/lion.jpg',
 			answers : ['This fox is the king of the animal kingdom', 'This deer is the king of the animal kingdom', 'This lion is the king of the animal kingdom', 'This wolf is the king of the animal kingdom'], 
 			correctOptIndex : 2,
 			isCorrect : false
 		}, {
-			id : 5,
 			image : 'img/bangalTigris.jpg',
 			answers : ['Beware of the panther!', 'The cheetah is the fastest predetor on ground', 'The wildcats ears are his most important organ', 'The bangal tigris is a near-extinct species'], 
 			correctOptIndex : 3,
 			isCorrect : false
 		}
 	],
-	[]
+	[{
+		image: 'img/armadilo.jpg',
+		answers:['my special ability is sniffing around with his big nose','my special ability is rolling to a ball to defend from predators','my special ability is running very fast to catch it\'s prey','Having exceptional swimming skills'],
+		correctOptIndex: 1,
+		isCorrect : false
+	},{
+		image: 'img/orangutan.jpg',
+		answers:['they love dense forests with high trees','they love vast seas with many fish','they love endless desserts with scarce water'],
+		correctOptIndex: 0,
+		isCorrect : false
+	},{
+		image: 'img/parrot.jpg',
+		answers:['Instead of hands i use my tail','Instead of hands i use my feathers','Instead of hands i use my beak and legs'],
+		correctOptIndex: 2,
+		isCorrect : false
+	},{
+		image: 'img/rhyno.jpg',
+		answers:['sought after their thick skin','sought after the speed it can reach when running','sought after their horns made of ivory'],
+		correctOptIndex: 2,
+		isCorrect : false
+	},{
+		image: 'img/chameleon.jpg',
+		answers:['Known mostly for climbing ability','Known mostly for independent  rotating eyes ability','Known mostly for excellent camouflage ability'],
+		correctOptIndex: 2,
+		isCorrect : false
+	}
+	
+	]
 ];
 
 var gCurrQuestion = 0;

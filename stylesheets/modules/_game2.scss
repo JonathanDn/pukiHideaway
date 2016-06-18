@@ -15,7 +15,7 @@
     background: green;
     border: 1px solid black;
     //width: 100%
-	max-width:500px;
+	width: 65%;
 }
 
 
@@ -74,8 +74,8 @@
     border: 1px solid white;
     outline: 1px solid black;
     position: relative;
-    height: 32px;
-    width: 36px;
+    // height: 32px;
+    // width: 36px;
     text-align: center;
     .rightBlockNum {
         // center on x / y axises --> anchor the text
@@ -89,8 +89,8 @@
     color: white;
     background: black;
     border: 1px solid white;
-    height: 32px;
-    width: 36px;
+    // height: 32px;
+    // width: 36px;
     text-align: center;
     padding: 10px;
 
@@ -118,47 +118,8 @@
     }
 }
 
-
-/*
-table{
-border:1px solid black;
-outline: 1px solid black;
+@media (max-width:700px) {
+    td {
+        max-width: 30px;
+    }
 }
-
-.cell {
-    color: white;
-    background: black;
-    border: 1px solid white;
-    height: 32px;
-    //width: 36px;
-	width:3em;
-    text-align: center;
-    padding: 10px;
-
-    //.rightBlockNum {
-    //    // center on x / y axises --> anchor the text
-    //    position: absolute;
-    //    top: 50%;
-    //    transform: translate(-50%,-50%);
-    //}
-}
-.leftBlock {
-    color: white;
-    background: black;
-    border: 1px solid white;
-    outline: 1px solid black;
-    //position: relative;
-    height: 32px;
-    width: 36px;
-    text-align: center;
-    //.leftBlockNum {
-    //    // center on x / y axises --> anchor the text
-    //    position: absolute;
-    //    top: 50%;
-    //    transform: translate(-50%,-50%);
-    //}
-}
-
-.boardContainer{
-float:left;}
-*/

@@ -10,7 +10,7 @@
 .boardContainer {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
     // background-image: url("../img/gradiantBlue.jpg");
     border: 1px solid black;
     width: 75%;
@@ -32,12 +32,23 @@
     align-items: center;
     padding-top: 30px;
     // background: blue;
-    background-image: url("../img/gradiantBlue2.jpg");
+    // background-image: url("../img/gradiantBlue2.jpg");
     border: 1px solid black;
     position: relative;
     width: 25%;
-    .currDifficulty {
+    // gradiant diagonal
+    background: #d8e0de; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #d8e0de 0%, #aebfbc 1%, #aebfbc 1%, #829d98 19%, #829d98 19%, #829d98 22%, #99afab 32%, #99afab 32%, #8ea6a2 36%, #aebfbc 54%, #829d98 58%, #4e5c5a 75%, #4e5c5a 85%, #0e0e0e 98%, #0e0e0e 98%, #0e0e0e 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #d8e0de 0%,#aebfbc 1%,#aebfbc 1%,#829d98 19%,#829d98 19%,#829d98 22%,#99afab 32%,#99afab 32%,#8ea6a2 36%,#aebfbc 54%,#829d98 58%,#4e5c5a 75%,#4e5c5a 85%,#0e0e0e 98%,#0e0e0e 98%,#0e0e0e 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #d8e0de 0%,#aebfbc 1%,#aebfbc 1%,#829d98 19%,#829d98 19%,#829d98 22%,#99afab 32%,#99afab 32%,#8ea6a2 36%,#aebfbc 54%,#829d98 58%,#4e5c5a 75%,#4e5c5a 85%,#0e0e0e 98%,#0e0e0e 98%,#0e0e0e 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
+    .currDifficulty {
+        margin-left: 3px;
+        font-size: 14px;
+        font-family: 'Aclonica', serif;
+        text-shadow: -2px 2px 2px black; 
     }
 
     .attemptsCount {
@@ -46,13 +57,9 @@
         margin: 5px;
         font-family: verdana;
         font-size: 16px;
+        font-family: 'Aclonica', serif;
+        text-shadow: -2px 2px 2px black;
     }
-    .currDifficulty {
-        margin-left: 3px;
-        font-family: verdana;
-        font-size: 14px;
-    }
-
 
     .looseBlocks {
         // border: 1px solid black;
@@ -126,15 +133,19 @@
 
 // next chal button container and button - currently hidden from display
 .nextChallangeContainer2 {
+    z-index: 1px;
+    position: absolute;
+    top: 45vh;
+    left: 25%;
     display: none;
     padding-bottom: 10px;
     .nextChallange2 {
         // border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
         width: 120px;
-        margin: auto;
+        // margin: auto;
         
     }
 }

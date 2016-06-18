@@ -8,7 +8,7 @@ var DIFFICULTIES=[{
 	cols : 7,
 	hiddenBlocks : 3
 },{
-	rows : 10,
+	rows : 7,
 	cols : 7,
 	hiddenBlocks : 4
 }]

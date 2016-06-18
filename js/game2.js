@@ -1,10 +1,19 @@
 'use strict'
-
-var NUMS = {
+var DIFFICULTIES=[{
 	rows : 3,
 	cols : 7,
+	hiddenBlocks : 2
+},{
+	rows : 5,
+	cols : 7,
 	hiddenBlocks : 3
-};
+},{
+	rows : 10,
+	cols : 7,
+	hiddenBlocks : 4
+}]
+
+var NUMS;
 
 // count number of attempts to drag n drop
 var gTotalAttemptsCounter = 0;
@@ -16,6 +25,11 @@ var gCurrRow = 0;
 // init game 1
 $(document).ready(function () {
 	verifyChalAccess(1);
+	var difficulty = loadGameDifficulty();
+	NUMS=DIFFICULTIES[difficulty];
+	var elDifficulty=document.querySelector('.currDifficulty');
+	elDifficulty.textContent+=DIFFICULTYTEXT[difficulty];
+
 	renderBoard(0);
 });
 

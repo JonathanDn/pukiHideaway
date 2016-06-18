@@ -6224,6 +6224,10 @@ header {
 header h1 {
   color: gold; }
 
+h2 {
+  font-size: 30px;
+  margin-left: 10px; }
+
 footer {
   background-color: black;
   text-align: center;
@@ -6726,11 +6730,10 @@ footer {
   color: blue; }
 
 .challanges {
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 23vmin; }
+  height: 28vmin; }
 
 .challanges .chal {
   border: 2px solid darkblue;
@@ -6738,8 +6741,8 @@ footer {
   background-color: blue;
   height: 5em;
   border-radius: 50%;
-  height: 120px;
-  width: 120px;
+  height: 70px;
+  width: 70px;
   font-size: 15px;
   text-align: center;
   line-height: 60px; }
@@ -6750,3 +6753,16 @@ footer {
 .challanges .locked:before {
   font-size: 1.5em;
   color: black; }
+
+.contactUs {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1px; }
+
+.diffText {
+  margin-left: 10px;
+  font-size: 18px; }
+
+.chalText {
+  margin-left: 10px;
+  font-size: 18px; }

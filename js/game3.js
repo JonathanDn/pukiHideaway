@@ -71,7 +71,7 @@ function ondrop(event, ui) {
 	//make them invisible - because .hide() will mess up the layout
 	$(this).css("visibility", "hidden");
 	ui.draggable.css("visibility", "hidden");
-	console.table(event);
+	//console.table(event);
 
 	//somehow this event is fired twice every correct drop
 	//this is a workaround
@@ -81,6 +81,8 @@ function ondrop(event, ui) {
 	if (gRemaining === 0) {
 		//show the continue button to next challanges
 		$('.nextChallangeContainer').show();
+		//$('.nextChallangeContainer').dialog();
+		
 		// save progress to local storage.
 		saveCurrChal(3);
 	}

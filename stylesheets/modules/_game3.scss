@@ -50,7 +50,7 @@
         // border: 1px solid black;
         display: flex;
         justify-content: center;
-        height: 76vmax;
+        height: 76vh;
         width: 100%;
         padding-bottom: 10px;
         padding-top: 20px;
@@ -111,11 +111,11 @@
         display: flex;
         flex-direction: row;
         .boardContainer3 {
-            
+            height: 95vmin;
         
         }
         .infoContainer3 {
-            height: 150vmin;
+            height: 95vmin;
             width: 25vmin;
         }
             .sumBlocks {

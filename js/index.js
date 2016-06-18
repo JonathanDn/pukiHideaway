@@ -7,7 +7,7 @@ var gChals = [{
 		name : 'Complete numbers',
 	}, {
 		href : 'game3.html',
-		name : 'Calculations',
+		name : 'Calculate',
 	},
 	{
 		href : 'game4.html',

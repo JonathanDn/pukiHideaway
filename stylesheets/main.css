@@ -6480,14 +6480,14 @@ footer {
   background: black;
   border: 1px solid white;
   outline: 1px solid black;
-  height: 11vmin;
-  width: 11vmin;
-  margin: 0.5vmin;
+  height: 10vmin;
+  width: 10vmin;
+  margin: 1vmin;
   text-align: center;
   position: relative; }
 
 .game3 .sumBlocks .sumBlock .sumBlockNum {
-  font-size: 3.3vmin;
+  font-size: 6vmin;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%); }

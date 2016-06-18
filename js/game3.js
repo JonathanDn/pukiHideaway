@@ -18,8 +18,9 @@ var gMax;
 $(document).ready(function () {
 	verifyChalAccess(2);
 	gDifficulty = loadGameDifficulty();
-	gAmount=DIFFICULTIES[gDifficulty].amount;
-	gMax=DIFFICULTIES[gDifficulty].max;
+	gAmount = DIFFICULTIES[gDifficulty].amount;
+	gRemaining = gAmount;
+	gMax = DIFFICULTIES[gDifficulty].max;
 
 	renderBoard();
 	initDragAndDrop();
@@ -42,10 +43,15 @@ function renderBoard() {
 	$board.html(boardItems.join(''));
 	var $sumBlocks = $('.sumBlocks');
 	var blocksHTML = '';
-	for (var i = 1; i <= gAmount; i++) {
-		blocksHTML += '<div class="sumBlock" id="drag-' + i + '">' + i + '</div>';
-	}
-	$sumBlocks.html(blocksHTML);
+	var draggableBlocks = getArrayOfRandomUniqueNums(gAmount, 1, gMax);
+	draggableBlocks.sort(function(a, b){return a-b});
+	draggableBlocks.forEach(function (blockValue) {
+		blocksHTML += '<div class="sumBlock" id="drag-' + blockValue + '">' + blockValue + '</div>';
+	});
+
+
+
+$sumBlocks.html(blocksHTML);
 }
 
 function initDragAndDrop() {
@@ -82,13 +88,13 @@ function ondrop(event, ui) {
 }
 
 //min is inclusive,max is exclusive
-function getArrayOfRandomUniqueNums(length,min,max){
-	var ar=[parseInt(Math.random()*max)+min]
-	var coung=1;
-	while(count<length){
-		var rand=parseInt(Math.random()*max)+min;
-		if (!ar.includes(rand){
+function getArrayOfRandomUniqueNums(length, min, max) {
+	var ar = [parseInt(Math.random() * max) + min];
+	while (ar.length < length) {
+		var rand = parseInt(Math.random() * max) + min;
+		if (!ar.includes(rand)) {
 			ar.push(rand);
 		}
 	}
+	return ar;
 }
